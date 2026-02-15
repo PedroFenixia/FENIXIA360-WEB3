@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FENIX IA — $ fenix --analyze --channels=all</title>
+<title>FENIX IA — Analiza todas tus comunicaciones con IA</title>
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="FENIX IA: Analiza todas tus comunicaciones empresariales con IA. 5 canales, transcripción automática, análisis de sentimiento. Desde 99€/mes. Comunicaciones ilimitadas.">
@@ -11,14 +11,14 @@
 <meta name="author" content="FENIX IA SOLUTIONS">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Spanish">
-<meta name="theme-color" content="#00ff88">
+<meta name="theme-color" content="#4d65ff">
 <link rel="canonical" href="https://web3.fenixia360.com/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://web3.fenixia360.com/">
 <meta property="og:title" content="FENIX IA — Analytics de comunicaciones con IA">
-<meta property="og:description" content="5 canales. IA. Comunicaciones ilimitadas. Desde 99€/mes. fenix --analyze --channels=all">
+<meta property="og:description" content="5 canales. IA. Comunicaciones ilimitadas. Desde 99€/mes.">
 <meta property="og:image" content="https://web3.fenixia360.com/og-image.png">
 <meta property="og:site_name" content="FENIX IA">
 <meta property="og:locale" content="es_ES">
@@ -26,7 +26,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://web3.fenixia360.com/">
-<meta name="twitter:title" content="FENIX IA — $ fenix --analyze --channels=all">
+<meta name="twitter:title" content="FENIX IA — Analytics de comunicaciones con IA">
 <meta name="twitter:description" content="Analytics de comunicaciones con IA. 5 canales. Ilimitadas. 99€/mes.">
 <meta name="twitter:image" content="https://web3.fenixia360.com/twitter-card.png">
 
@@ -36,266 +36,233 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#0a0a0a;--bg2:#111111;--bg3:#1a1a1a;--card:#0f0f0f;
-  --green:#00ff88;--green2:#00cc6a;--green-dim:rgba(0,255,136,.08);--green-glow:rgba(0,255,136,.15);
-  --amber:#ffaa00;--red:#ff4444;--cyan:#00ddff;--purple:#aa88ff;
-  --text:#b8b8b8;--text2:#999;--text3:#777;--white:#e8e8e8;
-  --border:#222;--border2:#333;
-  --mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;
+  --bg:#ffffff;--bg2:#f8f9fa;--bg3:#f1f3f5;
+  --card:#ffffff;--card-border:#e5e7eb;--card-hover:#f8f9fa;
+  --accent:#4d65ff;--accent2:#3b50e0;--accent-soft:rgba(77,101,255,.06);--accent-glow:rgba(77,101,255,.12);
+  --green:#10b981;--green-soft:rgba(16,185,129,.08);
+  --amber:#f59e0b;--red:#ef4444;--cyan:#06b6d4;--purple:#8b5cf6;
+  --text:#1a1a2e;--text2:#4b5563;--text3:#9ca3af;
+  --border:#e5e7eb;--border2:#d1d5db;
+  --sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.04);
+  --shadow:0 4px 16px rgba(0,0,0,.06);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.08);
+  --radius:16px;--radius-sm:12px;--radius-xs:8px;
 }
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--mono);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{color:var(--green);text-decoration:none;transition:all .2s}
-a:hover{color:var(--green2);text-shadow:0 0 8px rgba(0,255,136,.3)}
-::selection{background:var(--green);color:var(--bg)}
+body{font-family:var(--sans);background:var(--bg);color:var(--text2);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:all .2s}
+a:hover{color:var(--accent2)}
+::selection{background:var(--accent);color:#fff}
 img{max-width:100%}
 
-/* SCANLINES */
-body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,136,.008) 2px,rgba(0,255,136,.008) 4px);opacity:.6}
-
-/* CURSOR BLINK */
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-.cursor{display:inline-block;width:8px;height:1.1em;background:var(--green);vertical-align:text-bottom;animation:blink 1s step-end infinite;margin-left:2px}
-@keyframes glow-pulse{0%,100%{text-shadow:0 0 4px rgba(0,255,136,.3)}50%{text-shadow:0 0 12px rgba(0,255,136,.6),0 0 24px rgba(0,255,136,.2)}}
-
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:all .3s;font-size:.82rem}
-nav.scrolled{box-shadow:0 0 20px rgba(0,255,136,.05)}
-.nav-logo{display:flex;align-items:center;gap:.5rem}
-.nav-brand{font-weight:700;font-size:.95rem;color:var(--green);letter-spacing:1px}
-.nav-prompt{color:var(--text3);font-size:.75rem}
-.nav-links{display:flex;gap:1.5rem;align-items:center}
-.nav-links a{color:var(--text2);font-size:.78rem;letter-spacing:.5px}
-.nav-links a:hover{color:var(--green)}
-.nav-links a::before{content:'> ';color:var(--text3)}
-.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.2rem;border-radius:3px;font-weight:600;font-size:.8rem;transition:all .2s;cursor:pointer;border:none;font-family:var(--mono);letter-spacing:.3px}
-.btn-primary{background:var(--green);color:var(--bg) !important;box-shadow:0 0 15px rgba(0,255,136,.15)}
-.btn-primary:hover{box-shadow:0 0 25px rgba(0,255,136,.3);transform:translateY(-1px);color:var(--bg) !important}
-.btn-outline{background:transparent;color:var(--green);border:1px solid var(--border2)}
-.btn-outline:hover{border-color:var(--green);background:var(--green-dim)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:all .3s;font-size:.88rem}
+nav.scrolled{border-bottom-color:var(--border);box-shadow:var(--shadow-sm)}
+.nav-logo{display:flex;align-items:center;gap:.6rem}
+.nav-brand{font-weight:800;font-size:1.05rem;color:var(--text);letter-spacing:-.2px}
+.nav-tagline{color:var(--text3);font-size:.72rem;border-left:1px solid var(--border);padding-left:.6rem;display:none}
+@media(min-width:1080px){.nav-tagline{display:block}}
+.nav-links{display:flex;gap:1.8rem;align-items:center}
+.nav-links a{color:var(--text2);font-size:.85rem;font-weight:500}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.4rem;border-radius:var(--radius-xs);font-weight:600;font-size:.85rem;transition:all .25s;cursor:pointer;border:none;font-family:var(--sans);letter-spacing:-.1px}
+.btn-primary{background:var(--accent);color:#fff !important;box-shadow:0 2px 8px rgba(77,101,255,.25)}
+.btn-primary:hover{background:var(--accent2);box-shadow:0 4px 16px rgba(77,101,255,.35);transform:translateY(-1px);color:#fff !important}
+.btn-outline{background:transparent;color:var(--accent);border:1.5px solid var(--border2)}
+.btn-outline:hover{border-color:var(--accent);background:var(--accent-soft)}
 
 /* MOBILE MENU */
-.mobile-menu-btn{display:none;background:none;border:1px solid var(--border2);color:var(--green);font-size:.85rem;cursor:pointer;padding:.4rem .8rem;z-index:101;font-family:var(--mono);border-radius:2px}
-.mobile-menu{position:fixed;top:0;left:-100%;width:85%;max-width:320px;height:100vh;background:var(--bg);padding:4.5rem 1.5rem 2rem;transition:left .3s ease;z-index:99;border-right:1px solid var(--green-dim)}
+.mobile-menu-btn{display:none;background:none;border:1.5px solid var(--border);color:var(--text);font-size:.85rem;cursor:pointer;padding:.45rem .9rem;z-index:101;font-family:var(--sans);border-radius:var(--radius-xs);font-weight:500}
+.mobile-menu{position:fixed;top:0;left:-100%;width:85%;max-width:340px;height:100vh;background:var(--bg);padding:5rem 1.8rem 2rem;transition:left .3s ease;z-index:99;box-shadow:var(--shadow-lg)}
 .mobile-menu.active{left:0}
-.mobile-overlay{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,.8);opacity:0;visibility:hidden;transition:all .3s;z-index:98}
+.mobile-overlay{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:all .3s;z-index:98}
 .mobile-overlay.active{opacity:1;visibility:visible}
-.mobile-menu a{display:block;padding:.75rem 0;color:var(--text);font-size:.85rem;border-bottom:1px solid var(--border)}
-.mobile-menu a::before{content:'$ ';color:var(--green)}
-.mobile-menu a:hover{color:var(--green)}
+.mobile-menu a{display:block;padding:.85rem 0;color:var(--text2);font-size:.92rem;font-weight:500;border-bottom:1px solid var(--border)}
+.mobile-menu a:hover{color:var(--accent)}
 .mobile-menu .btn{margin-top:1.5rem;width:100%;text-align:center;justify-content:center}
 
-/* HERO TERMINAL */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:7rem 2rem 5rem}
-.hero-inner{max-width:960px;margin:0 auto;width:100%}
-.terminal{background:var(--card);border:1px solid var(--border2);border-radius:6px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(0,255,136,.03)}
-.term-bar{display:flex;align-items:center;gap:8px;padding:.6rem 1rem;background:var(--bg3);border-bottom:1px solid var(--border)}
-.term-dots{display:flex;gap:6px}
-.term-dots span{width:10px;height:10px;border-radius:50%}
-.term-dots span:nth-child(1){background:#ff5f57}
-.term-dots span:nth-child(2){background:#febc2e}
-.term-dots span:nth-child(3){background:#28c840}
-.term-title{font-size:.7rem;color:var(--text3);margin-left:.8rem}
-.term-body{padding:1.5rem;font-size:.88rem;line-height:2}
-.term-line{margin-bottom:.15rem}
-.prompt{color:var(--green)}
-.cmd{color:var(--white);font-weight:600}
-.flag{color:var(--cyan)}
-.val{color:var(--amber)}
-.output{color:var(--text);padding-left:1rem}
-.output.success{color:var(--green)}
-.output.warn{color:var(--amber)}
-.output.error{color:var(--red)}
-.output.info{color:var(--cyan)}
-.output.dim{color:var(--text3)}
-.highlight{color:var(--green);font-weight:700;animation:glow-pulse 3s ease-in-out infinite}
-.comment{color:var(--text3);font-style:italic}
-.hero-below{margin-top:2.5rem;display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:8rem 2rem 5rem;background:linear-gradient(180deg,var(--accent-soft) 0%,var(--bg) 60%)}
+.hero-inner{max-width:800px;margin:0 auto;text-align:center;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;background:var(--accent-soft);border:1px solid rgba(77,101,255,.15);border-radius:100px;font-size:.78rem;font-weight:600;color:var(--accent);margin-bottom:1.5rem}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:3.2rem;font-weight:900;color:var(--text);line-height:1.1;letter-spacing:-1.5px;margin-bottom:1rem}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.15rem;color:var(--text2);max-width:560px;margin:0 auto 2rem;line-height:1.6}
+.hero-ctas{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.hero-ctas .btn{padding:.75rem 2rem;font-size:.92rem}
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap}
 .hero-stat{text-align:center}
-.hero-stat .v{font-size:1.6rem;font-weight:800;color:var(--green);font-family:var(--mono);text-shadow:0 0 8px rgba(0,255,136,.2)}
-.hero-stat .l{font-size:.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:.15rem}
-.hero-ctas{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}
+.hero-stat .v{font-size:1.8rem;font-weight:800;color:var(--text);font-family:var(--mono);letter-spacing:-1px}
+.hero-stat .l{font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:.2rem;font-weight:500}
 
 /* SECTIONS */
-section{padding:5rem 2rem}
+section{padding:5.5rem 2rem}
 .container{max-width:960px;margin:0 auto}
-.sec-header{margin-bottom:2.5rem}
-.sec-comment{color:var(--text3);font-size:.78rem;margin-bottom:.3rem}
-.sec-comment::before{content:'// '}
-.sec-title{font-size:1.5rem;font-weight:700;color:var(--green);letter-spacing:-.3px;font-family:var(--sans)}
-.sec-desc{color:var(--text2);font-size:.85rem;margin-top:.4rem;max-width:600px}
+.sec-header{margin-bottom:3rem;text-align:center}
+.sec-label{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:.6rem;padding:.3rem .8rem;background:var(--accent-soft);border-radius:100px}
+.sec-title{font-size:2rem;font-weight:800;color:var(--text);letter-spacing:-.5px;line-height:1.2}
+.sec-desc{color:var(--text2);font-size:1rem;margin-top:.6rem;max-width:560px;margin-left:auto;margin-right:auto}
 
-/* CODE BLOCKS */
-.code-block{background:var(--card);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.2rem;transition:all .3s}
-.code-block:hover{border-color:rgba(0,255,136,.2)}
-.code-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1rem;background:var(--bg3);border-bottom:1px solid var(--border);font-size:.7rem;color:var(--text3)}
-.code-lang{color:var(--cyan);font-weight:600}
-.code-body{padding:1.2rem 1rem;font-size:.82rem;line-height:1.8}
-.ln{color:var(--text3);display:inline-block;width:2.5rem;text-align:right;margin-right:1rem;user-select:none}
-.key{color:var(--purple)}.str{color:var(--amber)}.fn{color:var(--cyan)}.bool{color:var(--red)}.num{color:var(--green)}
-
-/* PRODUCTS AS MODULES */
-.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
-.mod-card{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:1.5rem 1.2rem;transition:all .3s;position:relative;overflow:hidden}
-.mod-card:hover{border-color:var(--green);box-shadow:0 0 20px rgba(0,255,136,.05)}
-.mod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
-.mod-card:nth-child(1)::before{background:var(--green)}
+/* PRODUCT CARDS */
+.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.mod-card{background:var(--card);border:1.5px solid var(--card-border);border-radius:var(--radius);padding:2rem 1.5rem;transition:all .3s;position:relative;overflow:hidden}
+.mod-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.mod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--radius) var(--radius) 0 0}
+.mod-card:nth-child(1)::before{background:var(--accent)}
 .mod-card:nth-child(2)::before{background:var(--cyan)}
 .mod-card:nth-child(3)::before{background:var(--purple)}
-.mod-name{font-size:.95rem;font-weight:700;margin-bottom:.2rem}
-.mod-card:nth-child(1) .mod-name{color:var(--green)}
-.mod-card:nth-child(2) .mod-name{color:var(--cyan)}
-.mod-card:nth-child(3) .mod-name{color:var(--purple)}
-.mod-ver{font-size:.65rem;color:var(--text3);margin-bottom:.8rem}
-.mod-desc{font-size:.78rem;color:var(--text2);line-height:1.6;margin-bottom:.8rem}
-.mod-feats{list-style:none;display:flex;flex-direction:column;gap:.35rem}
-.mod-feats li{font-size:.72rem;color:var(--text3)}
-.mod-feats li::before{content:'+ ';color:var(--green);font-weight:700}
-.mod-install{margin-top:1rem;padding:.5rem .8rem;background:var(--bg3);border-radius:3px;font-size:.7rem;color:var(--text2);border:1px solid var(--border)}
-.mod-install .cmd-prefix{color:var(--green)}
+.mod-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem}
+.mod-card:nth-child(1) .mod-icon{background:rgba(77,101,255,.08);color:var(--accent)}
+.mod-card:nth-child(2) .mod-icon{background:rgba(6,182,212,.08);color:var(--cyan)}
+.mod-card:nth-child(3) .mod-icon{background:rgba(139,92,246,.08);color:var(--purple)}
+.mod-name{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
+.mod-ver{font-size:.72rem;color:var(--text3);margin-bottom:.8rem;font-weight:500}
+.mod-desc{font-size:.88rem;color:var(--text2);line-height:1.6;margin-bottom:1rem}
+.mod-feats{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.mod-feats li{font-size:.82rem;color:var(--text2);display:flex;align-items:flex-start;gap:.5rem}
+.mod-feats li::before{content:'';width:5px;height:5px;border-radius:50%;margin-top:.45rem;flex-shrink:0}
+.mod-card:nth-child(1) .mod-feats li::before{background:var(--accent)}
+.mod-card:nth-child(2) .mod-feats li::before{background:var(--cyan)}
+.mod-card:nth-child(3) .mod-feats li::before{background:var(--purple)}
 
-/* CHANNELS MATRIX */
-.ch-matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2rem}
-.ch-node{text-align:center;padding:1.2rem .5rem;border:1px solid var(--border);border-radius:4px;background:var(--card);transition:all .3s;cursor:default}
-.ch-node:hover{border-color:var(--green);background:var(--green-dim)}
-.ch-node .ico{font-size:1.5rem;margin-bottom:.3rem}
-.ch-node .name{font-size:.72rem;font-weight:600;color:var(--white)}
-.ch-node .status{font-size:.6rem;color:var(--green);margin-top:.15rem;display:flex;align-items:center;justify-content:center;gap:.25rem}
-.ch-node .status::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite}
+/* CHANNELS */
+.ch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
+.ch-card{text-align:center;padding:1.8rem 1rem;border:1.5px solid var(--card-border);border-radius:var(--radius);background:var(--card);transition:all .3s;cursor:default}
+.ch-card:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
+.ch-card .ico{font-size:1.8rem;margin-bottom:.6rem}
+.ch-card .name{font-size:.85rem;font-weight:600;color:var(--text)}
+.ch-card .status{font-size:.7rem;color:var(--green);margin-top:.3rem;display:flex;align-items:center;justify-content:center;gap:.3rem;font-weight:500}
+.ch-card .status::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green)}
 
-/* PRICING AS CONFIG */
-.pr-config{background:var(--card);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-top:2rem}
-.pr-config-head{padding:.5rem 1rem;background:var(--bg3);border-bottom:1px solid var(--border);font-size:.7rem;color:var(--text3);display:flex;justify-content:space-between}
-.pr-config-body{padding:1.2rem}
-.pr-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.pr-plan{border:1px solid var(--border);border-radius:3px;padding:1.2rem;transition:all .3s}
-.pr-plan:hover{border-color:rgba(0,255,136,.3)}
-.pr-plan.featured{border-color:var(--green);box-shadow:0 0 15px rgba(0,255,136,.05);position:relative}
-.pr-plan.featured::after{content:'# RECOMENDADO';position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--green);color:var(--bg);font-size:.58rem;font-weight:700;padding:.15rem .6rem;border-radius:2px;letter-spacing:1px}
-.pr-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.5rem}
-.pr-label.t1{color:var(--green)}.pr-label.t2{color:var(--cyan)}.pr-label.t3{color:var(--purple)}
-.pr-price{font-size:2rem;font-weight:800;color:var(--white);letter-spacing:-1px;margin-bottom:.1rem}
-.pr-price span{font-size:.75rem;color:var(--text3);font-weight:400}
-.pr-meta{font-size:.68rem;color:var(--text3);margin-bottom:1rem}
-.pr-list{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem}
-.pr-list li{font-size:.72rem;color:var(--text2)}
-.pr-list li::before{content:'[x] ';color:var(--green);font-weight:700}
-.tbl-section{margin-top:2rem}
-.tbl-section h3{font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:.8rem}
-.tbl-section h3::before{content:'## ';color:var(--green)}
-.tiers-tbl{width:100%;min-width:600px;border-collapse:collapse;font-size:.78rem}
-.tiers-tbl th{text-align:left;padding:.5rem .8rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);border-bottom:1px solid var(--border2);font-weight:600}
-.tiers-tbl td{padding:.45rem .8rem;border-bottom:1px solid var(--border);color:var(--text2)}
-.tiers-tbl tr:hover td{background:var(--green-dim)}
-.tiers-tbl .hl{color:var(--green);font-weight:700}
+/* PRICING */
+.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.pr-card{border:1.5px solid var(--card-border);border-radius:var(--radius);padding:2rem 1.5rem;background:var(--card);transition:all .3s;position:relative}
+.pr-card:hover{box-shadow:var(--shadow)}
+.pr-card.featured{border-color:var(--accent);box-shadow:0 8px 32px rgba(77,101,255,.12)}
+.pr-card.featured::after{content:'Recomendado';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;padding:.25rem .9rem;border-radius:100px;letter-spacing:.3px}
+.pr-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.6rem}
+.pr-label.t1{color:var(--accent)}.pr-label.t2{color:var(--cyan)}.pr-label.t3{color:var(--purple)}
+.pr-price{font-size:2.5rem;font-weight:900;color:var(--text);letter-spacing:-1.5px;margin-bottom:.1rem;font-family:var(--mono)}
+.pr-price span{font-size:.85rem;color:var(--text3);font-weight:400;font-family:var(--sans)}
+.pr-meta{font-size:.78rem;color:var(--text3);margin-bottom:1.2rem}
+.pr-list{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.5rem}
+.pr-list li{font-size:.82rem;color:var(--text2);display:flex;align-items:center;gap:.5rem}
+.pr-list li::before{content:'✓';color:var(--green);font-weight:700;font-size:.75rem}
+.tbl-section{margin-top:3rem}
+.tbl-section h3{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1rem}
+.tiers-tbl{width:100%;min-width:600px;border-collapse:separate;border-spacing:0;font-size:.82rem;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+.tiers-tbl th{text-align:left;padding:.7rem 1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);background:var(--bg2);font-weight:600;border-bottom:1px solid var(--border)}
+.tiers-tbl td{padding:.6rem 1rem;border-bottom:1px solid var(--border);color:var(--text2)}
+.tiers-tbl tr:last-child td{border-bottom:none}
+.tiers-tbl tr:hover td{background:var(--accent-soft)}
+.tiers-tbl .hl{color:var(--accent);font-weight:700}
 .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
 /* COMPARISON */
-.cmp-tbl{width:100%;min-width:500px;margin-top:1.5rem;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:4px;overflow:hidden;font-size:.78rem}
-.cmp-tbl th{background:var(--bg3);padding:.5rem .8rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);text-align:left;font-weight:600}
-.cmp-tbl td{padding:.45rem .8rem;border-top:1px solid var(--border);color:var(--text2)}
-.cmp-tbl tr:last-child{background:var(--green-dim)}
-.cmp-tbl tr:last-child td{color:var(--green);font-weight:600}
-.cmp-tbl .x{color:var(--red)}.cmp-tbl .v{color:var(--green)}
+.cmp-tbl{width:100%;min-width:500px;margin-top:1.5rem;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;font-size:.82rem}
+.cmp-tbl th{background:var(--bg2);padding:.7rem 1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);text-align:left;font-weight:600}
+.cmp-tbl td{padding:.6rem 1rem;border-top:1px solid var(--border);color:var(--text2)}
+.cmp-tbl tr:last-child{background:var(--accent-soft)}
+.cmp-tbl tr:last-child td{color:var(--accent);font-weight:700}
+.cmp-tbl .x{color:var(--red);font-weight:600}.cmp-tbl .v{color:var(--green);font-weight:600}
 
-/* USE CASES AS LOGS */
-.uc-sector-nav{display:flex;gap:.5rem;margin-top:1.5rem;flex-wrap:wrap}
-.uc-nav-btn{padding:.4rem .9rem;border:1px solid var(--border);border-radius:2px;background:var(--card);color:var(--text2);font-size:.72rem;font-family:var(--mono);cursor:pointer;transition:all .2s}
-.uc-nav-btn:hover{border-color:var(--green);color:var(--green)}
-.uc-nav-btn.active{background:var(--green);color:var(--bg);border-color:var(--green)}
-.uc-log-block{display:none;margin-top:1.5rem}
-.uc-log-block.active{display:block}
-.uc-log-header{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;background:var(--bg3);border:1px solid var(--border);border-bottom:none;border-radius:4px 4px 0 0;font-size:.75rem}
-.uc-log-header .sector-name{color:var(--green);font-weight:700}
-.uc-log-header .sector-desc{color:var(--text3)}
-.uc-log-body{border:1px solid var(--border);border-radius:0 0 4px 4px;padding:0}
-.uc-log-entry{padding:1rem 1.2rem;border-bottom:1px solid var(--border);transition:background .2s}
-.uc-log-entry:last-child{border-bottom:none}
-.uc-log-entry:hover{background:var(--green-dim)}
-.uc-log-entry .log-head{display:flex;align-items:center;gap:.5rem;margin-bottom:.4rem;font-size:.72rem}
-.uc-log-entry .log-tag{padding:.15rem .4rem;border-radius:2px;font-size:.6rem;font-weight:700;letter-spacing:.5px}
-.uc-log-entry .log-tag.pulse{background:rgba(0,255,136,.1);color:var(--green)}
-.uc-log-entry .log-tag.connect{background:rgba(0,221,255,.1);color:var(--cyan)}
-.uc-log-entry .log-tag.f360{background:rgba(170,136,255,.1);color:var(--purple)}
-.uc-log-entry .log-title{font-size:.82rem;font-weight:600;color:var(--white);margin-bottom:.3rem}
-.uc-log-entry .log-desc{font-size:.75rem;color:var(--text2);line-height:1.6}
-.uc-log-entry .log-result{margin-top:.5rem;font-size:.72rem;font-weight:600;color:var(--green)}
-.uc-log-entry .log-result::before{content:'>>> '}
-@media(max-width:600px){.uc-log-entry{padding:.8rem}}
+/* USE CASES */
+.uc-nav{display:flex;gap:.5rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap}
+.uc-nav-btn{padding:.5rem 1.2rem;border:1.5px solid var(--border);border-radius:100px;background:var(--bg);color:var(--text2);font-size:.82rem;font-family:var(--sans);font-weight:500;cursor:pointer;transition:all .2s}
+.uc-nav-btn:hover{border-color:var(--accent);color:var(--accent)}
+.uc-nav-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.uc-block{display:none;margin-top:2rem}
+.uc-block.active{display:block}
+.uc-header{display:flex;align-items:center;gap:.8rem;padding:1rem 1.5rem;background:var(--bg2);border:1px solid var(--border);border-bottom:none;border-radius:var(--radius) var(--radius) 0 0;font-size:.88rem}
+.uc-header .sector-icon{font-size:1.5rem}
+.uc-header .sector-name{font-weight:700;color:var(--text)}
+.uc-header .sector-desc{color:var(--text3);font-size:.82rem}
+.uc-body{border:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius)}
+.uc-entry{padding:1.2rem 1.5rem;border-bottom:1px solid var(--border);transition:background .2s}
+.uc-entry:last-child{border-bottom:none;border-radius:0 0 var(--radius) var(--radius)}
+.uc-entry:hover{background:var(--bg2)}
+.uc-entry .entry-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem}
+.uc-entry .entry-tag{padding:.2rem .6rem;border-radius:100px;font-size:.68rem;font-weight:600;letter-spacing:.3px}
+.uc-entry .entry-tag.pulse{background:rgba(77,101,255,.08);color:var(--accent)}
+.uc-entry .entry-tag.connect{background:rgba(6,182,212,.08);color:var(--cyan)}
+.uc-entry .entry-tag.f360{background:rgba(139,92,246,.08);color:var(--purple)}
+.uc-entry .entry-title{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.3rem}
+.uc-entry .entry-desc{font-size:.85rem;color:var(--text2);line-height:1.65}
+.uc-entry .entry-result{margin-top:.6rem;font-size:.82rem;font-weight:600;color:var(--green);display:flex;align-items:center;gap:.4rem}
+.uc-entry .entry-result::before{content:'→'}
 
 /* CTA */
-.cta-sec{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.cta-terminal{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:4px;overflow:hidden}
-.cta-term-bar{display:flex;align-items:center;gap:6px;padding:.5rem .8rem;background:var(--bg3);border-bottom:1px solid var(--border);font-size:.68rem;color:var(--text3)}
-.cta-term-dots{display:flex;gap:5px}
-.cta-term-dots span{width:8px;height:8px;border-radius:50%}
-.cta-term-dots span:nth-child(1){background:#ff5f57}
-.cta-term-dots span:nth-child(2){background:#febc2e}
-.cta-term-dots span:nth-child(3){background:#28c840}
-.cta-body{padding:1.5rem}
-.cta-body .prompt-line{font-size:.78rem;color:var(--text3);margin-bottom:1rem}
-.cta-body .prompt-line .cmd-text{color:var(--green)}
-input,select{padding:.65rem .9rem;border-radius:3px;border:1px solid var(--border);background:var(--bg3);color:var(--green);font-family:var(--mono);font-size:.82rem;outline:none;transition:border .2s;width:100%}
-input:focus,select:focus{border-color:var(--green);box-shadow:0 0 8px rgba(0,255,136,.1)}
-input::placeholder{color:var(--text3)}
-select{color:var(--text2)}
-select option{background:var(--bg);color:var(--text)}
+.cta-sec{background:var(--text);padding:5.5rem 2rem}
+.cta-sec .sec-title{color:#fff}
+.cta-sec .sec-desc{color:rgba(255,255,255,.6)}
+.cta-sec .sec-label{background:rgba(77,101,255,.2);color:rgba(255,255,255,.9)}
+.cta-form{max-width:480px;margin:0 auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:2rem;backdrop-filter:blur(8px)}
+.cta-form input,.cta-form select{padding:.75rem 1rem;border-radius:var(--radius-xs);border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#fff;font-family:var(--sans);font-size:.88rem;outline:none;transition:border .2s;width:100%}
+.cta-form input:focus,.cta-form select:focus{border-color:var(--accent)}
+.cta-form input::placeholder{color:rgba(255,255,255,.35)}
+.cta-form select{color:rgba(255,255,255,.5)}
+.cta-form select option{background:var(--text);color:#fff}
+.cta-ok{display:none;padding:1.5rem;background:rgba(16,185,129,.1);border-radius:var(--radius-sm);border:1px solid rgba(16,185,129,.2);text-align:center}
+.cta-ok p:first-child{font-size:1rem;font-weight:700;color:var(--green);margin-bottom:.3rem}
+.cta-ok p:last-child{color:rgba(255,255,255,.5);font-size:.85rem}
 
 /* FOOTER */
-footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem 1rem;font-size:.72rem}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2rem 1.5rem}
 .ft-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.ft-brand{color:var(--green);font-weight:700;font-size:.85rem}
-.ft-links{display:flex;gap:1.5rem}
-.ft-links a{color:var(--text3);font-size:.72rem}
-.ft-links a:hover{color:var(--green)}
-.ft-copy{color:var(--text3);font-size:.65rem;text-align:center;margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--border);max-width:960px;margin-left:auto;margin-right:auto}
-.ft-legal{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:960px;margin:.6rem auto 0}
-.ft-legal a{color:var(--text3);font-size:.65rem;transition:color .2s}
-.ft-legal a:hover{color:var(--green)}
+.ft-brand{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:.95rem;color:var(--text)}
+.ft-links{display:flex;gap:2rem}
+.ft-links a{color:var(--text3);font-size:.82rem;font-weight:500}
+.ft-links a:hover{color:var(--accent)}
+.ft-copy{color:var(--text3);font-size:.72rem;text-align:center;margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--border);max-width:960px;margin-left:auto;margin-right:auto}
+.ft-legal{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:960px;margin:.8rem auto 0}
+.ft-legal a{color:var(--text3);font-size:.72rem;transition:color .2s}
+.ft-legal a:hover{color:var(--accent)}
 
 /* FADE IN */
-.fi{opacity:0;transform:translateY(16px);transition:all .45s ease-out}
+.fi{opacity:0;transform:translateY(20px);transition:all .5s cubic-bezier(.22,1,.36,1)}
 .fi.vis{opacity:1;transform:translateY(0)}
-.s1{transition-delay:.06s}.s2{transition-delay:.12s}.s3{transition-delay:.18s}
-
-/* ASCII SEPARATOR */
-.ascii-sep{text-align:center;color:var(--text3);font-size:.65rem;padding:1rem 0;opacity:.4}
+.s1{transition-delay:.08s}.s2{transition-delay:.16s}.s3{transition-delay:.24s}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .mod-grid,.pr-plans{grid-template-columns:1fr}
-  .proc-grid{grid-template-columns:repeat(2,1fr)}
-  .ch-matrix{grid-template-columns:repeat(3,1fr)}
+  .mod-grid,.pr-grid{grid-template-columns:1fr}
+  .ch-grid{grid-template-columns:repeat(3,1fr)}
   .nav-links{display:none}
   .mobile-menu-btn{display:block}
-  .hero-below{flex-direction:column;align-items:flex-start;gap:1.5rem}
-  .hero-ctas{margin-left:0}
-  .sec-title{font-size:1.2rem}
+  .hero h1{font-size:2.2rem}
+  .hero-stats{gap:1.5rem}
+  .sec-title{font-size:1.5rem}
 }
 
 @media(max-width:600px){
   .mobile-menu-btn{display:block}
   nav{padding:.7rem 1.2rem}
-  section{padding:3rem 1.2rem}
-  .hero{padding:5rem 1.2rem 3rem;min-height:auto}
-  .term-body{padding:1rem .8rem;font-size:.78rem}
-  .ch-matrix{grid-template-columns:repeat(2,1fr)}
-  .proc-grid{grid-template-columns:1fr}
-  .hero-stat .v{font-size:1.3rem}
-  .btn{padding:.6rem 1rem;font-size:.78rem;min-height:44px}
-  input,select{font-size:16px}
-  button[type="submit"]{min-height:48px}
+  section{padding:3.5rem 1.2rem}
+  .hero{padding:6rem 1.2rem 3rem;min-height:auto}
+  .hero h1{font-size:1.8rem;letter-spacing:-1px}
+  .hero-sub{font-size:1rem}
+  .hero-ctas .btn{padding:.7rem 1.5rem;font-size:.85rem}
+  .ch-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-stat .v{font-size:1.4rem}
+  .btn{padding:.6rem 1rem;font-size:.82rem;min-height:44px}
+  .cta-form input,.cta-form select{font-size:16px}
+  .cta-form button[type="submit"]{min-height:48px}
   .ft-links{flex-direction:column;gap:.6rem;text-align:center}
   .ft-inner{flex-direction:column;text-align:center}
   footer{padding:1.5rem 1.2rem .8rem}
-  .table-wrapper{border-radius:4px}
-  .tiers-tbl th,.tiers-tbl td,.cmp-tbl th,.cmp-tbl td{padding:.4rem .5rem;font-size:.68rem}
-  .sec-title{font-size:1.1rem}
-  .pr-price{font-size:1.6rem}
+  .table-wrapper{border-radius:var(--radius-sm)}
+  .tiers-tbl th,.tiers-tbl td,.cmp-tbl th,.cmp-tbl td{padding:.45rem .6rem;font-size:.72rem}
+  .sec-title{font-size:1.3rem}
+  .pr-price{font-size:2rem}
+  .uc-entry{padding:.9rem 1rem}
+  .cta-sec{padding:3.5rem 1.2rem}
 }
 </style>
 
@@ -327,85 +294,62 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-logo">
-    <img src="logo.png" alt="FENIX IA" style="height:28px;vertical-align:middle;margin-right:4px;filter:drop-shadow(0 0 4px rgba(0,255,136,.3))">
-    <span class="nav-brand">FENIX_IA</span>
-    <span class="nav-prompt">~/dashboard</span>
+    <img src="logo.png" alt="FENIX IA" style="height:44px;vertical-align:middle;margin-right:4px;opacity:.7;filter:brightness(1.1)">
+    <span class="nav-brand">FENIX IA</span>
+    <span class="nav-tagline">Inteligencia en comunicaciones</span>
   </div>
   <div class="nav-links">
-    <a href="#modules">m&oacute;dulos</a>
-    <a href="#channels">canales</a>
-    <a href="#pricing">config</a>
-    <a href="#sectors">procesos</a>
-    <a href="#contacto" class="btn btn-primary">$ init demo</a>
+    <a href="#productos">Productos</a>
+    <a href="#canales">Canales</a>
+    <a href="#precios">Precios</a>
+    <a href="#sectores">Sectores</a>
+    <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
   </div>
-  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Men&uacute;">[menu]</button>
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Men&uacute;">Menu</button>
 </nav>
 
 <div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
 <div class="mobile-menu">
-  <a href="#modules" onclick="toggleMobileMenu()">m&oacute;dulos</a>
-  <a href="#channels" onclick="toggleMobileMenu()">canales</a>
-  <a href="#pricing" onclick="toggleMobileMenu()">config</a>
-  <a href="#sectors" onclick="toggleMobileMenu()">procesos</a>
-  <a href="#contacto" onclick="toggleMobileMenu()">contacto</a>
-  <a href="#contacto" class="btn btn-primary" onclick="toggleMobileMenu()">$ init demo</a>
+  <a href="#productos" onclick="toggleMobileMenu()">Productos</a>
+  <a href="#canales" onclick="toggleMobileMenu()">Canales</a>
+  <a href="#precios" onclick="toggleMobileMenu()">Precios</a>
+  <a href="#sectores" onclick="toggleMobileMenu()">Sectores</a>
+  <a href="#contacto" onclick="toggleMobileMenu()">Contacto</a>
+  <a href="#contacto" class="btn btn-primary" onclick="toggleMobileMenu()">Solicitar demo</a>
 </div>
 
-<!-- HERO TERMINAL -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="terminal">
-      <div class="term-bar">
-        <div class="term-dots"><span></span><span></span><span></span></div>
-        <span class="term-title">fenix@ia:~/communications</span>
-      </div>
-      <div class="term-body" id="hero-terminal">
-        <div class="term-line"><span class="prompt">$ </span><span class="cmd">fenix</span> <span class="flag">--analyze</span> <span class="flag">--channels</span>=<span class="val">all</span></div>
-        <div class="term-line output dim">&nbsp;</div>
-        <div class="term-line output info">&#9608; FENIX IA v3.6.0 &mdash; Motor de Inteligencia en Comunicaciones</div>
-        <div class="term-line output dim">&nbsp;</div>
-        <div class="term-line output">Analizando comunicaciones empresariales...</div>
-        <div class="term-line output success">&#10003; 347 comunicaciones analizadas hoy</div>
-        <div class="term-line output success">&#10003; 5 canales conectados (calls, email, wa, tg, meta)</div>
-        <div class="term-line output success">&#10003; Sentimiento positivo: +78%</div>
-        <div class="term-line output warn">&#9888; 12 oportunidades comerciales detectadas</div>
-        <div class="term-line output error">&#10007; 3 llamadas sin devolver (prioridad alta)</div>
-        <div class="term-line output dim">&nbsp;</div>
-        <div class="term-line output">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-        <div class="term-line output"><span class="highlight">RESULTADO: Tu equipo pierde ~23% de oportunidades</span></div>
-        <div class="term-line output"><span class="highlight">por falta de visibilidad en comunicaciones.</span></div>
-        <div class="term-line output">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-        <div class="term-line output dim">&nbsp;</div>
-        <div class="term-line"><span class="prompt">$ </span><span class="cmd">fenix</span> <span class="flag">--fix</span> <span class="flag">--price</span>=<span class="val">99eur/mes</span> <span class="flag">--unlimited</span><span class="cursor"></span></div>
-      </div>
+    <div class="hero-badge"><span class="dot"></span> Motor de inteligencia activo</div>
+    <h1>Analiza todas tus <span>comunicaciones</span> con IA</h1>
+    <p class="hero-sub">5 canales. Transcripci&oacute;n autom&aacute;tica. An&aacute;lisis de sentimiento. Detecci&oacute;n de oportunidades. Tu equipo pierde ~23% de oportunidades por falta de visibilidad.</p>
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn btn-primary">Solicitar demo &rarr;</a>
+      <a href="#productos" class="btn btn-outline">Ver productos</a>
     </div>
-    <div class="hero-below">
+    <div class="hero-stats">
       <div class="hero-stat"><div class="v">99&euro;</div><div class="l">desde / mes</div></div>
       <div class="hero-stat"><div class="v">&infin;</div><div class="l">comunicaciones</div></div>
       <div class="hero-stat"><div class="v">5</div><div class="l">canales</div></div>
       <div class="hero-stat"><div class="v">&lt;24h</div><div class="l">activaci&oacute;n</div></div>
-      <div class="hero-ctas">
-        <a href="#contacto" class="btn btn-primary">$ fenix init &rarr;</a>
-        <a href="#modules" class="btn btn-outline">ver m&oacute;dulos</a>
-      </div>
     </div>
   </div>
 </section>
 
-<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-
-<!-- MODULES / PRODUCTS -->
-<section id="modules">
+<!-- PRODUCTS -->
+<section id="productos" style="background:var(--bg2)">
   <div class="container">
     <div class="sec-header">
-      <div class="sec-comment">M&oacute;dulos disponibles en el ecosistema FENIX</div>
-      <h2 class="sec-title">$ fenix modules --list</h2>
-      <p class="sec-desc">Tres m&oacute;dulos. Instala el que necesites o despliega el bundle completo</p>
+      <span class="sec-label">Productos</span>
+      <h2 class="sec-title">Tres m&oacute;dulos. Un ecosistema</h2>
+      <p class="sec-desc">Instala el que necesites o despliega el bundle completo</p>
     </div>
     <div class="mod-grid">
       <div class="mod-card fi">
-        <div class="mod-name">@fenix/pulse</div>
-        <div class="mod-ver">v3.6.0 &bull; Motor de Analytics</div>
+        <div class="mod-icon">&#128202;</div>
+        <div class="mod-name">FENIX Pulse</div>
+        <div class="mod-ver">Motor de Analytics</div>
         <p class="mod-desc">Motor de analytics con IA. Transcribe, analiza sentimiento, detecta oportunidades y genera res&uacute;menes accionables</p>
         <ul class="mod-feats">
           <li>Transcripci&oacute;n autom&aacute;tica de llamadas</li>
@@ -415,11 +359,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
           <li>Alertas de churn y leads fr&iacute;os</li>
           <li>Res&uacute;menes accionables con IA</li>
         </ul>
-        <div class="mod-install"><span class="cmd-prefix">$ </span>fenix install @fenix/pulse</div>
       </div>
       <div class="mod-card fi s1">
-        <div class="mod-name">@fenix/connect</div>
-        <div class="mod-ver">v3.6.0 &bull; Hub Unificado</div>
+        <div class="mod-icon">&#128279;</div>
+        <div class="mod-name">FENIX Connect</div>
+        <div class="mod-ver">Hub Unificado</div>
         <p class="mod-desc">Hub de comunicaciones unificado. 5 canales en una sola bandeja. Asignaci&oacute;n autom&aacute;tica, historial completo</p>
         <ul class="mod-feats">
           <li>Bandeja unificada 5 canales</li>
@@ -429,145 +373,119 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
           <li>Plantillas y respuestas r&aacute;pidas</li>
           <li>M&eacute;tricas de tiempo de respuesta</li>
         </ul>
-        <div class="mod-install"><span class="cmd-prefix">$ </span>fenix install @fenix/connect</div>
       </div>
       <div class="mod-card fi s2">
-        <div class="mod-name">@fenix/360</div>
-        <div class="mod-ver">v3.6.0 &bull; Bundle Completo</div>
+        <div class="mod-icon">&#127793;</div>
+        <div class="mod-name">FENIX 360</div>
+        <div class="mod-ver">Bundle Completo</div>
         <p class="mod-desc">Pulse + Connect en un solo paquete. Visi&oacute;n 360&deg; real del cliente. M&aacute;ximo poder, m&aacute;ximo ahorro</p>
         <ul class="mod-feats">
-          <li>Todo de @fenix/pulse</li>
-          <li>Todo de @fenix/connect</li>
+          <li>Todo de FENIX Pulse</li>
+          <li>Todo de FENIX Connect</li>
           <li>Comunicaciones ilimitadas</li>
           <li>Onboarding personalizado</li>
           <li>Soporte prioritario</li>
           <li>20% ahorro vs separados</li>
         </ul>
-        <div class="mod-install"><span class="cmd-prefix">$ </span>fenix install @fenix/360</div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-
-<!-- CHANNELS AS CONNECTED NODES -->
-<section id="channels" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div class="container">
-    <div class="sec-header" style="text-align:center">
-      <div class="sec-comment">Canales conectados en el sistema</div>
-      <h2 class="sec-title">$ fenix status --channels</h2>
-      <p class="sec-desc" style="margin:0 auto">5 canales conectados. 0 puntos ciegos. Monitoreo en tiempo real</p>
-    </div>
-    <div class="ch-matrix">
-      <div class="ch-node fi"><div class="ico">&#128222;</div><div class="name">Llamadas</div><div class="status">ONLINE</div></div>
-      <div class="ch-node fi s1"><div class="ico">&#9993;&#65039;</div><div class="name">Email</div><div class="status">ONLINE</div></div>
-      <div class="ch-node fi s2"><div class="ico">&#128172;</div><div class="name">WhatsApp</div><div class="status">ONLINE</div></div>
-      <div class="ch-node fi s3"><div class="ico">&#9992;&#65039;</div><div class="name">Telegram</div><div class="status">ONLINE</div></div>
-      <div class="ch-node fi"><div class="ico">&#127760;</div><div class="name">Meta</div><div class="status">ONLINE</div></div>
-    </div>
-
-    <!-- Code sample -->
-    <div class="code-block" style="margin-top:2.5rem">
-      <div class="code-head"><span class="code-lang">fenix.config.json</span><span>output</span></div>
-      <div class="code-body">
-        <div><span class="ln">1</span><span class="key">{</span></div>
-        <div><span class="ln">2</span>&nbsp;&nbsp;<span class="key">"channels"</span>: [<span class="str">"calls"</span>, <span class="str">"email"</span>, <span class="str">"whatsapp"</span>, <span class="str">"telegram"</span>, <span class="str">"meta"</span>],</div>
-        <div><span class="ln">3</span>&nbsp;&nbsp;<span class="key">"ai_engine"</span>: <span class="str">"fenix-pulse-v3"</span>,</div>
-        <div><span class="ln">4</span>&nbsp;&nbsp;<span class="key">"transcription"</span>: <span class="bool">true</span>,</div>
-        <div><span class="ln">5</span>&nbsp;&nbsp;<span class="key">"sentiment_analysis"</span>: <span class="bool">true</span>,</div>
-        <div><span class="ln">6</span>&nbsp;&nbsp;<span class="key">"opportunity_detection"</span>: <span class="bool">true</span>,</div>
-        <div><span class="ln">7</span>&nbsp;&nbsp;<span class="key">"unlimited_comms"</span>: <span class="bool">true</span>,</div>
-        <div><span class="ln">8</span>&nbsp;&nbsp;<span class="key">"price_per_month"</span>: <span class="num">99</span></div>
-        <div><span class="ln">9</span><span class="key">}</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING AS CONFIG -->
-<section id="pricing">
+<!-- CHANNELS -->
+<section id="canales">
   <div class="container">
     <div class="sec-header">
-      <div class="sec-comment">Configuraci&oacute;n de precios y planes</div>
-      <h2 class="sec-title">$ fenix config --pricing</h2>
+      <span class="sec-label">Canales</span>
+      <h2 class="sec-title">5 canales. 1 plataforma. 0 puntos ciegos</h2>
+      <p class="sec-desc">Monitoreo en tiempo real de todas tus comunicaciones</p>
+    </div>
+    <div class="ch-grid">
+      <div class="ch-card fi"><div class="ico">&#128222;</div><div class="name">Llamadas</div><div class="status">Conectado</div></div>
+      <div class="ch-card fi s1"><div class="ico">&#9993;&#65039;</div><div class="name">Email</div><div class="status">Conectado</div></div>
+      <div class="ch-card fi s2"><div class="ico">&#128172;</div><div class="name">WhatsApp</div><div class="status">Conectado</div></div>
+      <div class="ch-card fi s3"><div class="ico">&#9992;&#65039;</div><div class="name">Telegram</div><div class="status">Conectado</div></div>
+      <div class="ch-card fi"><div class="ico">&#127760;</div><div class="name">Meta</div><div class="status">Conectado</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="precios" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">Precios</span>
+      <h2 class="sec-title">Transparentes. Sin sorpresas</h2>
       <p class="sec-desc">Comunicaciones ilimitadas. Sin costes ocultos. Onboarding incluido</p>
     </div>
-    <div class="pr-config">
-      <div class="pr-config-head"><span>pricing.yml</span><span>3 planes</span></div>
-      <div class="pr-config-body">
-        <div class="pr-plans">
-          <div class="pr-plan fi">
-            <div class="pr-label t1">@fenix/pulse</div>
-            <div class="pr-price">&euro;79<span>/mes</span></div>
-            <div class="pr-meta">1 usuario &bull; comms ilimitadas</div>
-            <ul class="pr-list">
-              <li>Analytics IA multicanal</li>
-              <li>Transcripci&oacute;n autom&aacute;tica</li>
-              <li>Sentimiento + keywords</li>
-              <li>Dashboard de calidad</li>
-              <li>Alertas y res&uacute;menes IA</li>
-            </ul>
-            <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;font-size:.75rem">$ init --plan=pulse</a>
-          </div>
-          <div class="pr-plan featured fi s1">
-            <div class="pr-label t3">@fenix/360</div>
-            <div class="pr-price">&euro;99<span>/mes</span></div>
-            <div class="pr-meta">1 usuario &bull; comms ilimitadas &bull; bundle completo</div>
-            <ul class="pr-list">
-              <li>Todo de Pulse + Connect</li>
-              <li>Hub unificado 5 canales</li>
-              <li>Onboarding personalizado</li>
-              <li>Soporte prioritario</li>
-              <li>20% ahorro vs separados</li>
-            </ul>
-            <a href="#contacto" class="btn btn-primary" style="width:100%;justify-content:center;font-size:.75rem">$ init --plan=360</a>
-          </div>
-          <div class="pr-plan fi s2">
-            <div class="pr-label t2">@fenix/connect</div>
-            <div class="pr-price">&euro;49<span>/mes</span></div>
-            <div class="pr-meta">1 usuario &bull; comms ilimitadas</div>
-            <ul class="pr-list">
-              <li>Hub unificado 5 canales</li>
-              <li>Asignaci&oacute;n autom&aacute;tica</li>
-              <li>Historial por cliente</li>
-              <li>Integraci&oacute;n CRM</li>
-              <li>M&eacute;tricas respuesta</li>
-            </ul>
-            <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;font-size:.75rem">$ init --plan=connect</a>
-          </div>
-        </div>
+    <div class="pr-grid">
+      <div class="pr-card fi">
+        <div class="pr-label t1">FENIX Pulse</div>
+        <div class="pr-price">&euro;79<span>/mes</span></div>
+        <div class="pr-meta">1 usuario &bull; comunicaciones ilimitadas</div>
+        <ul class="pr-list">
+          <li>Analytics IA multicanal</li>
+          <li>Transcripci&oacute;n autom&aacute;tica</li>
+          <li>Sentimiento + keywords</li>
+          <li>Dashboard de calidad</li>
+          <li>Alertas y res&uacute;menes IA</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Solicitar</a>
+      </div>
+      <div class="pr-card featured fi s1">
+        <div class="pr-label t3">FENIX 360</div>
+        <div class="pr-price">&euro;99<span>/mes</span></div>
+        <div class="pr-meta">1 usuario &bull; comunicaciones ilimitadas &bull; bundle completo</div>
+        <ul class="pr-list">
+          <li>Todo de Pulse + Connect</li>
+          <li>Hub unificado 5 canales</li>
+          <li>Onboarding personalizado</li>
+          <li>Soporte prioritario</li>
+          <li>20% ahorro vs separados</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary" style="width:100%;justify-content:center">Solicitar</a>
+      </div>
+      <div class="pr-card fi s2">
+        <div class="pr-label t2">FENIX Connect</div>
+        <div class="pr-price">&euro;49<span>/mes</span></div>
+        <div class="pr-meta">1 usuario &bull; comunicaciones ilimitadas</div>
+        <ul class="pr-list">
+          <li>Hub unificado 5 canales</li>
+          <li>Asignaci&oacute;n autom&aacute;tica</li>
+          <li>Historial por cliente</li>
+          <li>Integraci&oacute;n CRM</li>
+          <li>M&eacute;tricas respuesta</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Solicitar</a>
       </div>
     </div>
     <div class="tbl-section">
       <h3>Todos los tramos</h3>
       <div class="table-wrapper">
-        <table class="tiers-tbl"><thead><tr><th>usuarios</th><th>pulse</th><th>connect</th><th>360</th><th>onb. pulse</th><th>onb. connect</th><th>onb. 360</th><th>comunic.</th></tr></thead>
+        <table class="tiers-tbl"><thead><tr><th>Usuarios</th><th>Pulse</th><th>Connect</th><th>360</th><th>Onb. Pulse</th><th>Onb. Connect</th><th>Onb. 360</th><th>Comunic.</th></tr></thead>
         <tbody>
           <tr><td>1</td><td>79&euro;</td><td>49&euro;</td><td class="hl">99&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
           <tr><td>2</td><td>119&euro;</td><td>79&euro;</td><td class="hl">159&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
           <tr><td>3-5</td><td>149&euro;</td><td>99&euro;</td><td class="hl">199&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
           <tr><td>6-10</td><td>229&euro;</td><td>149&euro;</td><td class="hl">299&euro;/mes</td><td>399&euro;</td><td>249&euro;</td><td>549&euro;</td><td>&infin;</td></tr>
-          <tr><td>10+</td><td colspan="7" style="text-align:center;color:var(--text3)">$ fenix contact --custom-pricing</td></tr>
+          <tr><td>10+</td><td colspan="7" style="text-align:center;color:var(--text3)">Contactar para precios personalizados</td></tr>
         </tbody></table>
       </div>
-      <p style="color:var(--text3);font-size:.68rem;margin-top:.5rem"># 20% descuento con --annual flag. Onboarding es one-time, no recurrente</p>
+      <p style="color:var(--text3);font-size:.75rem;margin-top:.6rem">20% descuento en pago anual. Onboarding es un pago &uacute;nico, no recurrente.</p>
     </div>
   </div>
 </section>
 
-<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-
 <!-- COMPARISON -->
-<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div class="container" style="text-align:center">
-    <div class="sec-header" style="text-align:center">
-      <div class="sec-comment">Comparativa vs competidores</div>
-      <h2 class="sec-title">$ fenix benchmark --compare</h2>
-      <p class="sec-desc" style="margin:0 auto">2.6x-9x m&aacute;s barato. El &uacute;nico con 5 canales</p>
+<section>
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">Comparativa</span>
+      <h2 class="sec-title">&iquest;Por qu&eacute; FENIX IA?</h2>
+      <p class="sec-desc">2.6x-9x m&aacute;s barato. El &uacute;nico con 5 canales</p>
     </div>
     <div class="table-wrapper">
-      <table class="cmp-tbl"><thead><tr><th>plataforma</th><th>&euro;/user</th><th>llamadas</th><th>email</th><th>wa</th><th>tg</th><th>meta</th></tr></thead>
+      <table class="cmp-tbl"><thead><tr><th>Plataforma</th><th>&euro;/user</th><th>Llamadas</th><th>Email</th><th>WA</th><th>TG</th><th>Meta</th></tr></thead>
       <tbody>
         <tr><td>Gong</td><td>~275&euro;</td><td class="v">&#10003;</td><td class="v">&#10003;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td></tr>
         <tr><td>Ringover</td><td>~83&euro;</td><td class="v">&#10003;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td></tr>
@@ -579,164 +497,164 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
   </div>
 </section>
 
-<!-- USE CASES AS LOGS -->
-<section id="sectors">
+<!-- USE CASES -->
+<section id="sectores" style="background:var(--bg2)">
   <div class="container">
     <div class="sec-header">
-      <div class="sec-comment">Casos de uso por sector &mdash; logs reales del sistema</div>
-      <h2 class="sec-title">$ fenix logs --use-cases --verbose</h2>
-      <p class="sec-desc">Situaciones reales. Sin nombres. Solo lo que FENIX detecta y resuelve cada d&iacute;a</p>
+      <span class="sec-label">Casos de uso</span>
+      <h2 class="sec-title">Situaciones reales por sector</h2>
+      <p class="sec-desc">Sin nombres. Solo lo que FENIX detecta y resuelve cada d&iacute;a</p>
     </div>
 
-    <div class="uc-sector-nav">
-      <button class="uc-nav-btn active" onclick="showLog('clinicas',this)">clinicas</button>
-      <button class="uc-nav-btn" onclick="showLog('inmob',this)">inmobiliarias</button>
-      <button class="uc-nav-btn" onclick="showLog('ecom',this)">ecommerce</button>
-      <button class="uc-nav-btn" onclick="showLog('asesoria',this)">asesorias</button>
-      <button class="uc-nav-btn" onclick="showLog('seguros',this)">seguros</button>
+    <div class="uc-nav">
+      <button class="uc-nav-btn active" onclick="showLog('clinicas',this)">Cl&iacute;nicas</button>
+      <button class="uc-nav-btn" onclick="showLog('inmob',this)">Inmobiliarias</button>
+      <button class="uc-nav-btn" onclick="showLog('ecom',this)">E-commerce</button>
+      <button class="uc-nav-btn" onclick="showLog('asesoria',this)">Asesor&iacute;as</button>
+      <button class="uc-nav-btn" onclick="showLog('seguros',this)">Seguros</button>
     </div>
 
     <!-- CLINICAS -->
-    <div class="uc-log-block active" id="log-clinicas">
-      <div class="uc-log-header">
-        <span>&#127973;</span>
-        <span class="sector-name">clinicas</span>
-        <span class="sector-desc">// 80+ llamadas/d&iacute;a &bull; Cada llamada perdida = paciente que no vuelve</span>
+    <div class="uc-block active" id="log-clinicas">
+      <div class="uc-header">
+        <span class="sector-icon">&#127973;</span>
+        <span class="sector-name">Cl&iacute;nicas</span>
+        <span class="sector-desc">80+ llamadas/d&iacute;a &bull; Cada llamada perdida = paciente que no vuelve</span>
       </div>
-      <div class="uc-log-body">
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">09:14:22</span></div>
-          <div class="log-title">Llamadas perdidas recuperadas con alertas</div>
-          <div class="log-desc">Paciente llam&oacute; 3 veces sin respuesta. FENIX cruza llamadas perdidas con historial y genera alerta prioritaria antes de que llame a la competencia. El equipo devuelve la llamada en minutos</div>
-          <div class="log-result">De 12 llamadas sin devolver/d&iacute;a a 0 con alertas real-time</div>
+      <div class="uc-body">
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag pulse">PULSE</span></div>
+          <div class="entry-title">Llamadas perdidas recuperadas con alertas</div>
+          <div class="entry-desc">Paciente llam&oacute; 3 veces sin respuesta. FENIX cruza llamadas perdidas con historial y genera alerta prioritaria antes de que llame a la competencia. El equipo devuelve la llamada en minutos</div>
+          <div class="entry-result">De 12 llamadas sin devolver/d&iacute;a a 0 con alertas real-time</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">22:47:03</span></div>
-          <div class="log-title">Cancelaciones nocturnas detectadas antes de abrir</div>
-          <div class="log-desc">WhatsApp a las 22h cancelando cita de ma&ntilde;ana. La IA clasifica el mensaje como cancelaci&oacute;n, lo sube a bandeja prioritaria. El hueco se reubica antes de que abra la cl&iacute;nica a las 8:00</div>
-          <div class="log-result">Huecos de agenda cubiertos antes del inicio de jornada</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag connect">CONNECT</span></div>
+          <div class="entry-title">Cancelaciones nocturnas detectadas antes de abrir</div>
+          <div class="entry-desc">WhatsApp a las 22h cancelando cita de ma&ntilde;ana. La IA clasifica el mensaje como cancelaci&oacute;n, lo sube a bandeja prioritaria. El hueco se reubica antes de que abra la cl&iacute;nica a las 8:00</div>
+          <div class="entry-result">Huecos de agenda cubiertos antes del inicio de jornada</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">11:32:18</span></div>
-          <div class="log-title">Seguimiento post-tratamiento unificado</div>
-          <div class="log-desc">Tras intervenci&oacute;n, paciente llama, escribe WA, manda email. Todo se ve en hilo &uacute;nico por paciente con sentimiento de cada interacci&oacute;n analizado. Sin cambiar de app, sin perder contexto</div>
-          <div class="log-result">Visi&oacute;n completa del paciente en un solo panel</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag f360">360</span></div>
+          <div class="entry-title">Seguimiento post-tratamiento unificado</div>
+          <div class="entry-desc">Tras intervenci&oacute;n, paciente llama, escribe WA, manda email. Todo se ve en hilo &uacute;nico por paciente con sentimiento de cada interacci&oacute;n analizado. Sin cambiar de app, sin perder contexto</div>
+          <div class="entry-result">Visi&oacute;n completa del paciente en un solo panel</div>
         </div>
       </div>
     </div>
 
     <!-- INMOBILIARIAS -->
-    <div class="uc-log-block" id="log-inmob">
-      <div class="uc-log-header">
-        <span>&#127968;</span>
-        <span class="sector-name">inmobiliarias</span>
-        <span class="sector-desc">// Lead tarda 5min en enfriarse &bull; T&uacute; tardas 14h en responder</span>
+    <div class="uc-block" id="log-inmob">
+      <div class="uc-header">
+        <span class="sector-icon">&#127968;</span>
+        <span class="sector-name">Inmobiliarias</span>
+        <span class="sector-desc">Lead tarda 5min en enfriarse &bull; T&uacute; tardas 14h en responder</span>
       </div>
-      <div class="uc-log-body">
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">20:31:44</span></div>
-          <div class="log-title">Leads de portales respondidos en minutos</div>
-          <div class="log-desc">Contacto de portal inmobiliario llega por WA a las 20:30. FENIX clasifica como lead caliente, alerta al agente de guardia y prepara resumen con datos del inmueble que pide el comprador</div>
-          <div class="log-result">Tiempo primera respuesta: de 14h a &lt;15 minutos</div>
+      <div class="uc-body">
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag connect">CONNECT</span></div>
+          <div class="entry-title">Leads de portales respondidos en minutos</div>
+          <div class="entry-desc">Contacto de portal inmobiliario llega por WA a las 20:30. FENIX clasifica como lead caliente, alerta al agente de guardia y prepara resumen con datos del inmueble que pide el comprador</div>
+          <div class="entry-result">Tiempo primera respuesta: de 14h a &lt;15 minutos</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">10:05:12</span></div>
-          <div class="log-title">Seguimiento autom&aacute;tico de interesados</div>
-          <div class="log-desc">Cliente llam&oacute; hace 10 d&iacute;as. Le dijeron "te llamamos". Nadie lo hizo. Pulse transcribe llamada, extrae que busca 3 hab en zona centro, genera recordatorio si pasan 48h sin contacto</div>
-          <div class="log-result">Cero leads olvidados con seguimiento por IA</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag pulse">PULSE</span></div>
+          <div class="entry-title">Seguimiento autom&aacute;tico de interesados</div>
+          <div class="entry-desc">Cliente llam&oacute; hace 10 d&iacute;as. Le dijeron "te llamamos". Nadie lo hizo. Pulse transcribe llamada, extrae que busca 3 hab en zona centro, genera recordatorio si pasan 48h sin contacto</div>
+          <div class="entry-result">Cero leads olvidados con seguimiento por IA</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">15:22:07</span></div>
-          <div class="log-title">Contexto compartido entre agentes</div>
-          <div class="log-desc">Cliente habl&oacute; con agente A por tel&eacute;fono y agente B por email. Con 360, ambos ven misma ficha con historial completo de todos los canales. El cliente no repite, la agencia da imagen profesional</div>
-          <div class="log-result">Informaci&oacute;n compartida entre equipo sin fricci&oacute;n</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag f360">360</span></div>
+          <div class="entry-title">Contexto compartido entre agentes</div>
+          <div class="entry-desc">Cliente habl&oacute; con agente A por tel&eacute;fono y agente B por email. Con 360, ambos ven misma ficha con historial completo de todos los canales. El cliente no repite, la agencia da imagen profesional</div>
+          <div class="entry-result">Informaci&oacute;n compartida entre equipo sin fricci&oacute;n</div>
         </div>
       </div>
     </div>
 
     <!-- E-COMMERCE -->
-    <div class="uc-log-block" id="log-ecom">
-      <div class="uc-log-header">
-        <span>&#128722;</span>
-        <span class="sector-name">ecommerce</span>
-        <span class="sector-desc">// Cliente escribi&oacute; por 3 canales &bull; Le pediste que repitiera en los 3</span>
+    <div class="uc-block" id="log-ecom">
+      <div class="uc-header">
+        <span class="sector-icon">&#128722;</span>
+        <span class="sector-name">E-commerce</span>
+        <span class="sector-desc">Cliente escribi&oacute; por 3 canales &bull; Le pediste que repitiera en los 3</span>
       </div>
-      <div class="uc-log-body">
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">14:18:33</span></div>
-          <div class="log-title">Devoluciones resueltas en primer contacto</div>
-          <div class="log-desc">Comprador pide devoluci&oacute;n por IG DM. Luego llama. Luego email. Desde la primera interacci&oacute;n el agente ve qui&eacute;n es, qu&eacute; compr&oacute; y por qu&eacute; canales ya ha contactado. Sin repetir datos</div>
-          <div class="log-result">Resoluci&oacute;n en primer contacto sin fricci&oacute;n</div>
+      <div class="uc-body">
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag connect">CONNECT</span></div>
+          <div class="entry-title">Devoluciones resueltas en primer contacto</div>
+          <div class="entry-desc">Comprador pide devoluci&oacute;n por IG DM. Luego llama. Luego email. Desde la primera interacci&oacute;n el agente ve qui&eacute;n es, qu&eacute; compr&oacute; y por qu&eacute; canales ya ha contactado. Sin repetir datos</div>
+          <div class="entry-result">Resoluci&oacute;n en primer contacto sin fricci&oacute;n</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">08:45:21</span></div>
-          <div class="log-title">Detecci&oacute;n proactiva de churn</div>
-          <div class="log-desc">Cliente habitual lleva 6 semanas sin comprar. &Uacute;ltima llamada: sentimiento negativo. Pulse cruza frecuencia de compra con an&aacute;lisis de sentimiento y genera alerta de riesgo con motivo probable</div>
-          <div class="log-result">Churn detectado semanas antes de perder al cliente</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag pulse">PULSE</span></div>
+          <div class="entry-title">Detecci&oacute;n proactiva de churn</div>
+          <div class="entry-desc">Cliente habitual lleva 6 semanas sin comprar. &Uacute;ltima llamada: sentimiento negativo. Pulse cruza frecuencia de compra con an&aacute;lisis de sentimiento y genera alerta de riesgo con motivo probable</div>
+          <div class="entry-result">Churn detectado semanas antes de perder al cliente</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">00:12:55</span></div>
-          <div class="log-title">Picos de campa&ntilde;a gestionados con IA</div>
-          <div class="log-desc">Black Friday: WhatsApps x5. FENIX clasifica por urgencia (queja, pre-compra, seguimiento env&iacute;o) y asigna al agente correcto autom&aacute;ticamente, priorizando oportunidades de venta</div>
-          <div class="log-result">Picos de volumen convertidos en picos de venta</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag f360">360</span></div>
+          <div class="entry-title">Picos de campa&ntilde;a gestionados con IA</div>
+          <div class="entry-desc">Black Friday: WhatsApps x5. FENIX clasifica por urgencia (queja, pre-compra, seguimiento env&iacute;o) y asigna al agente correcto autom&aacute;ticamente, priorizando oportunidades de venta</div>
+          <div class="entry-result">Picos de volumen convertidos en picos de venta</div>
         </div>
       </div>
     </div>
 
     <!-- ASESORIAS -->
-    <div class="uc-log-block" id="log-asesoria">
-      <div class="uc-log-header">
-        <span>&#128188;</span>
-        <span class="sector-name">asesorias</span>
-        <span class="sector-desc">// Documentaci&oacute;n por 3 canales &bull; Plazos fiscales que no esperan</span>
+    <div class="uc-block" id="log-asesoria">
+      <div class="uc-header">
+        <span class="sector-icon">&#128188;</span>
+        <span class="sector-name">Asesor&iacute;as</span>
+        <span class="sector-desc">Documentaci&oacute;n por 3 canales &bull; Plazos fiscales que no esperan</span>
       </div>
-      <div class="uc-log-body">
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">16:33:09</span></div>
-          <div class="log-title">Documentaci&oacute;n unificada por cliente</div>
-          <div class="log-desc">Cliente manda factura por WA, pregunta por email si la recibiste, llama 2 d&iacute;as despu&eacute;s. Las 3 interacciones en un &uacute;nico hilo. El asesor sabe qu&eacute; tiene y qu&eacute; falta sin buscar entre apps</div>
-          <div class="log-result">Todo lo del cliente en un panel, da igual el canal</div>
+      <div class="uc-body">
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag connect">CONNECT</span></div>
+          <div class="entry-title">Documentaci&oacute;n unificada por cliente</div>
+          <div class="entry-desc">Cliente manda factura por WA, pregunta por email si la recibiste, llama 2 d&iacute;as despu&eacute;s. Las 3 interacciones en un &uacute;nico hilo. El asesor sabe qu&eacute; tiene y qu&eacute; falta sin buscar entre apps</div>
+          <div class="entry-result">Todo lo del cliente en un panel, da igual el canal</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">11:07:44</span></div>
-          <div class="log-title">Llamadas transcritas y resumidas por IA</div>
-          <div class="log-desc">Cliente llama 15 min con instrucciones sobre su declaraci&oacute;n. Pulse transcribe y genera resumen estructurado con puntos clave + acciones pendientes. Cero notas manuales</div>
-          <div class="log-result">Transcripci&oacute;n + resumen ejecutivo autom&aacute;tico por llamada</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag pulse">PULSE</span></div>
+          <div class="entry-title">Llamadas transcritas y resumidas por IA</div>
+          <div class="entry-desc">Cliente llama 15 min con instrucciones sobre su declaraci&oacute;n. Pulse transcribe y genera resumen estructurado con puntos clave + acciones pendientes. Cero notas manuales</div>
+          <div class="entry-result">Transcripci&oacute;n + resumen ejecutivo autom&aacute;tico por llamada</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">09:51:28</span></div>
-          <div class="log-title">Plazos cr&iacute;ticos extra&iacute;dos de conversaciones</div>
-          <div class="log-desc">En llamada, cliente dice "necesito la declaraci&oacute;n antes del viernes". IA extrae urgencia temporal y genera alerta vinculada al expediente. No se pierde entre 50 tareas del d&iacute;a</div>
-          <div class="log-result">Plazos y urgencias detectados autom&aacute;ticamente de las conversaciones</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag f360">360</span></div>
+          <div class="entry-title">Plazos cr&iacute;ticos extra&iacute;dos de conversaciones</div>
+          <div class="entry-desc">En llamada, cliente dice "necesito la declaraci&oacute;n antes del viernes". IA extrae urgencia temporal y genera alerta vinculada al expediente. No se pierde entre 50 tareas del d&iacute;a</div>
+          <div class="entry-result">Plazos y urgencias detectados autom&aacute;ticamente de las conversaciones</div>
         </div>
       </div>
     </div>
 
     <!-- SEGUROS -->
-    <div class="uc-log-block" id="log-seguros">
-      <div class="uc-log-header">
-        <span>&#128737;</span>
-        <span class="sector-name">seguros</span>
-        <span class="sector-desc">// El tono de una llamada predice si el cliente renueva o se va</span>
+    <div class="uc-block" id="log-seguros">
+      <div class="uc-header">
+        <span class="sector-icon">&#128737;</span>
+        <span class="sector-name">Seguros</span>
+        <span class="sector-desc">El tono de una llamada predice si el cliente renueva o se va</span>
       </div>
-      <div class="uc-log-body">
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">13:22:17</span></div>
-          <div class="log-title">Siniestros documentados en minutos</div>
-          <div class="log-desc">Asegurado llama nervioso a reportar siniestro. Pulse transcribe, extrae datos (fecha, ubicaci&oacute;n, da&ntilde;os) y genera resumen estructurado listo para abrir expediente sin teclear nada</div>
-          <div class="log-result">Apertura de expediente autom&aacute;tica en minutos</div>
+      <div class="uc-body">
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag pulse">PULSE</span></div>
+          <div class="entry-title">Siniestros documentados en minutos</div>
+          <div class="entry-desc">Asegurado llama nervioso a reportar siniestro. Pulse transcribe, extrae datos (fecha, ubicaci&oacute;n, da&ntilde;os) y genera resumen estructurado listo para abrir expediente sin teclear nada</div>
+          <div class="entry-result">Apertura de expediente autom&aacute;tica en minutos</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">08:15:42</span></div>
-          <div class="log-title">Riesgo de fuga detectado 60 d&iacute;as antes</div>
-          <div class="log-desc">2 meses para renovaci&oacute;n. Cliente llam&oacute; 2 veces con sentimiento negativo. Pulse genera alerta de riesgo con motivo probable extra&iacute;do de transcripciones para que comercial act&uacute;e</div>
-          <div class="log-result">Intervenci&oacute;n proactiva antes de perder la p&oacute;liza</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag pulse">PULSE</span></div>
+          <div class="entry-title">Riesgo de fuga detectado 60 d&iacute;as antes</div>
+          <div class="entry-desc">2 meses para renovaci&oacute;n. Cliente llam&oacute; 2 veces con sentimiento negativo. Pulse genera alerta de riesgo con motivo probable extra&iacute;do de transcripciones para que comercial act&uacute;e</div>
+          <div class="entry-result">Intervenci&oacute;n proactiva antes de perder la p&oacute;liza</div>
         </div>
-        <div class="uc-log-entry">
-          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">17:44:05</span></div>
-          <div class="log-title">Cross-selling detectado por IA</div>
-          <div class="log-desc">En llamada rutinaria, cliente menciona que compr&oacute; segunda vivienda. IA detecta menci&oacute;n y genera oportunidad comercial: "posible p&oacute;liza de hogar adicional" vinculada al cliente</div>
-          <div class="log-result">Oportunidades de venta cruzada extra&iacute;das de conversaciones</div>
+        <div class="uc-entry">
+          <div class="entry-head"><span class="entry-tag f360">360</span></div>
+          <div class="entry-title">Cross-selling detectado por IA</div>
+          <div class="entry-desc">En llamada rutinaria, cliente menciona que compr&oacute; segunda vivienda. IA detecta menci&oacute;n y genera oportunidad comercial: "posible p&oacute;liza de hogar adicional" vinculada al cliente</div>
+          <div class="entry-result">Oportunidades de venta cruzada extra&iacute;das de conversaciones</div>
         </div>
       </div>
     </div>
@@ -744,41 +662,32 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
   </div>
 </section>
 
-<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-
-<!-- CTA TERMINAL -->
+<!-- CTA -->
 <section class="cta-sec" id="contacto">
   <div class="container" style="text-align:center">
     <div class="sec-header" style="text-align:center">
-      <div class="sec-comment">Inicializar demo de 30 minutos</div>
-      <h2 class="sec-title">$ fenix init --demo</h2>
-      <p class="sec-desc" style="margin:.5rem auto 2rem;color:var(--text2)">Con tus datos reales. Sin compromiso. Respuesta en &lt;24h</p>
+      <span class="sec-label">Contacto</span>
+      <h2 class="sec-title">Solicita tu demo de 30 minutos</h2>
+      <p class="sec-desc" style="margin-bottom:2rem">Con tus datos reales. Sin compromiso. Respuesta en &lt;24h</p>
     </div>
-    <div class="cta-terminal">
-      <div class="cta-term-bar">
-        <div class="cta-term-dots"><span></span><span></span><span></span></div>
-        <span>fenix@ia:~/demo</span>
-      </div>
-      <div class="cta-body">
-        <div class="prompt-line"><span class="cmd-text">$ fenix init --demo --interactive</span></div>
-        <form style="display:flex;flex-direction:column;gap:.7rem" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'">
-          <input type="text" placeholder="--name=&quot;Tu nombre&quot;" required>
-          <input type="email" placeholder="--email=&quot;email@empresa.com&quot;" required>
-          <input type="text" placeholder="--company=&quot;Empresa&quot; --size=N">
-          <select>
-            <option>--plan=&quot;selecciona&quot;</option>
-            <option>--plan=pulse</option>
-            <option>--plan=connect</option>
-            <option>--plan=360</option>
-            <option>--plan=partners</option>
-          </select>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.75rem;font-size:.82rem">$ fenix init --confirm &rarr;</button>
-          <p style="font-size:.65rem;color:var(--text3)"># Sin compromiso. Te contactamos en &lt;24h. Ctrl+C para cancelar</p>
-        </form>
-        <div id="ok" style="display:none;padding:1.2rem;background:var(--green-dim);border-radius:3px;border:1px solid rgba(0,255,136,.15)">
-          <p style="font-size:.9rem;font-weight:700;color:var(--green);margin-bottom:.3rem">&#10003; Demo inicializada correctamente</p>
-          <p style="color:var(--text2);font-size:.78rem">Proceso en cola. Te contactaremos en &lt;24h para configurar tu instancia</p>
-        </div>
+    <div class="cta-form" id="cta-form">
+      <form style="display:flex;flex-direction:column;gap:.8rem" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="email@empresa.com" required>
+        <input type="text" placeholder="Empresa y n&uacute;mero de empleados">
+        <select>
+          <option>Selecciona un plan</option>
+          <option>FENIX Pulse</option>
+          <option>FENIX Connect</option>
+          <option>FENIX 360</option>
+          <option>Partners</option>
+        </select>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.85rem;font-size:.9rem">Solicitar demo &rarr;</button>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.35)">Sin compromiso. Te contactamos en &lt;24h</p>
+      </form>
+      <div class="cta-ok" id="ok">
+        <p>&#10003; Demo solicitada correctamente</p>
+        <p>Te contactaremos en &lt;24h para configurar tu instancia</p>
       </div>
     </div>
   </div>
@@ -787,21 +696,24 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 <!-- FOOTER -->
 <footer>
   <div class="ft-inner">
-    <div class="ft-brand"><img src="logo.png" alt="FENIX IA" style="height:20px;vertical-align:middle;margin-right:4px;filter:drop-shadow(0 0 3px rgba(0,255,136,.25))">FENIX_IA</div>
+    <div class="ft-brand">
+      <img src="logo.png" alt="FENIX IA" style="height:32px;vertical-align:middle;opacity:.55;filter:brightness(1.1)">
+      FENIX IA
+    </div>
     <div class="ft-links">
-      <a href="#modules">m&oacute;dulos</a>
-      <a href="#channels">canales</a>
-      <a href="#pricing">config</a>
-      <a href="#sectors">procesos</a>
-      <a href="#contacto">init</a>
+      <a href="#productos">Productos</a>
+      <a href="#canales">Canales</a>
+      <a href="#precios">Precios</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#contacto">Contacto</a>
     </div>
   </div>
   <div class="ft-legal">
-    <a href="https://www.fenixia.tech/terminos" target="_blank">t&eacute;rminos</a>
-    <a href="https://www.fenixia.tech/privacidad" target="_blank">privacidad</a>
-    <a href="https://www.fenixia.tech/cookies" target="_blank">cookies</a>
+    <a href="https://www.fenixia.tech/terminos" target="_blank">T&eacute;rminos</a>
+    <a href="https://www.fenixia.tech/privacidad" target="_blank">Privacidad</a>
+    <a href="https://www.fenixia.tech/cookies" target="_blank">Cookies</a>
   </div>
-  <div class="ft-copy"># &copy; 2026 FENIX IA SOLUTIONS &mdash; fenixia.tech &mdash; Todos los derechos reservados &mdash; exit 0</div>
+  <div class="ft-copy">&copy; 2026 FENIX IA SOLUTIONS &mdash; fenixia.tech &mdash; Todos los derechos reservados</div>
 </footer>
 
 <script>
@@ -812,7 +724,7 @@ document.querySelectorAll('.fi').forEach(e=>obs.observe(e));
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}));
 
 function showLog(id,btn){
-  document.querySelectorAll('.uc-log-block').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.uc-block').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.uc-nav-btn').forEach(t=>t.classList.remove('active'));
   document.getElementById('log-'+id).classList.add('active');
   btn.classList.add('active');
@@ -823,17 +735,6 @@ function toggleMobileMenu(){
   document.querySelector('.mobile-overlay').classList.toggle('active');
   document.body.style.overflow=document.querySelector('.mobile-menu').classList.contains('active')?'hidden':'';
 }
-
-// Terminal typing effect for hero
-(function(){
-  const lines=document.querySelectorAll('#hero-terminal .term-line');
-  lines.forEach((l,i)=>{l.style.opacity='0';l.style.transform='translateY(4px)'});
-  let delay=300;
-  lines.forEach((l,i)=>{
-    setTimeout(()=>{l.style.transition='all .15s ease-out';l.style.opacity='1';l.style.transform='translateY(0)'},delay);
-    delay+=i<2?400:120;
-  });
-})();
 </script>
 </body>
 </html>
