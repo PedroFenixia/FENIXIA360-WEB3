@@ -102,6 +102,14 @@ nav.scrolled{border-bottom-color:rgba(0,0,0,.04);box-shadow:0 1px 8px rgba(0,0,0
 .hero-stat .v{font-size:1.8rem;font-weight:800;color:var(--text);font-family:var(--mono);letter-spacing:-1px}
 .hero-stat .l{font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.2px;margin-top:.3rem;font-weight:500}
 
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.how-step{text-align:center;padding:2rem 1.5rem}
+.how-num{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;margin:0 auto .8rem}
+.how-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.5rem}
+.how-desc{font-size:.88rem;color:var(--text2);line-height:1.65}
+.how-intro{max-width:600px;margin:0 auto;text-align:center;font-size:1.05rem;color:var(--text2);line-height:1.7}
+
 /* SECTIONS */
 section{padding:7rem 2.5rem}
 .container{max-width:960px;margin:0 auto}
@@ -136,7 +144,7 @@ section{padding:7rem 2.5rem}
 .ch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;margin-top:2.5rem}
 .ch-card{text-align:center;padding:2rem 1rem;border:1px solid var(--card-border);border-radius:var(--radius);background:var(--card);transition:all .4s ease;cursor:default;box-shadow:var(--shadow-sm)}
 .ch-card:hover{border-color:rgba(77,101,255,.15);background:rgba(77,101,255,.03);transform:translateY(-3px);box-shadow:var(--shadow)}
-.ch-card .ico{font-size:1.8rem;margin-bottom:.6rem}
+.ch-card .ico{margin-bottom:.8rem;display:flex;justify-content:center;color:var(--accent)}
 .ch-card .name{font-size:.85rem;font-weight:600;color:var(--text)}
 .ch-card .status{font-size:.7rem;color:var(--green);margin-top:.3rem;display:flex;align-items:center;justify-content:center;gap:.3rem;font-weight:500}
 .ch-card .status::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green)}
@@ -265,6 +273,7 @@ footer{background:var(--bg);border-top:1px solid var(--card-border);padding:3rem
 /* RESPONSIVE */
 @media(max-width:900px){
   .mod-grid,.pr-grid,.part-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr}
   .sec-grid{grid-template-columns:repeat(2,1fr)}
   .ch-grid{grid-template-columns:repeat(3,1fr)}
   .nav-links{display:none}
@@ -389,6 +398,34 @@ footer{background:var(--bg);border-top:1px solid var(--card-border);padding:3rem
   </div>
 </section>
 
+<!-- HOW IT WORKS - PLAIN LANGUAGE -->
+<section>
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">C&oacute;mo funciona</span>
+      <h2 class="sec-title">Tu equipo habla con clientes todo el d&iacute;a. &iquest;Sabes qu&eacute; est&aacute; pasando?</h2>
+    </div>
+    <p class="how-intro fi">Cada llamada, email, WhatsApp o mensaje en redes contiene informaci&oacute;n valiosa: clientes que se van a ir, oportunidades de venta, quejas sin resolver. FENIX IA los analiza todos autom&aacute;ticamente y te dice lo que necesitas saber.</p>
+    <div class="how-grid">
+      <div class="how-step fi">
+        <div class="how-num">1</div>
+        <div class="how-title">Conectamos tus canales</div>
+        <p class="how-desc">Enlazamos tu tel&eacute;fono, email, WhatsApp, Telegram e Instagram. Sin cambiar nada de tu operativa actual. Tu equipo sigue trabajando como siempre</p>
+      </div>
+      <div class="how-step fi s1">
+        <div class="how-num">2</div>
+        <div class="how-title">La IA escucha y analiza</div>
+        <p class="how-desc">Transcribe cada llamada, lee cada mensaje y detecta autom&aacute;ticamente: qui&eacute;n est&aacute; contento, qui&eacute;n se quiere ir y qu&eacute; ventas se est&aacute;n perdiendo</p>
+      </div>
+      <div class="how-step fi s2">
+        <div class="how-num">3</div>
+        <div class="how-title">T&uacute; actúas a tiempo</div>
+        <p class="how-desc">Recibes alertas claras y res&uacute;menes concretos. Sin jerga t&eacute;cnica. Para que tu equipo pueda actuar antes de perder un cliente o una venta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRODUCTS -->
 <section id="productos" style="background:var(--bg2)">
   <div class="container">
@@ -453,11 +490,11 @@ footer{background:var(--bg);border-top:1px solid var(--card-border);padding:3rem
       <p class="sec-desc">Monitoreo en tiempo real de todas tus comunicaciones</p>
     </div>
     <div class="ch-grid">
-      <div class="ch-card fi"><div class="ico">&#128222;</div><div class="name">Llamadas</div><div class="status">Transcripci&oacute;n + IA</div></div>
-      <div class="ch-card fi s1"><div class="ico">&#9993;&#65039;</div><div class="name">Email</div><div class="status">Hilos completos</div></div>
-      <div class="ch-card fi s2"><div class="ico">&#128172;</div><div class="name">WhatsApp</div><div class="status">Business API</div></div>
-      <div class="ch-card fi s3"><div class="ico">&#9992;&#65039;</div><div class="name">Telegram</div><div class="status">Bots + canales</div></div>
-      <div class="ch-card fi"><div class="ico">&#127760;</div><div class="name">Meta</div><div class="status">Messenger + IG</div></div>
+      <div class="ch-card fi"><div class="ico"><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div class="name">Llamadas</div><div class="status">Transcripci&oacute;n + IA</div></div>
+      <div class="ch-card fi s1"><div class="ico"><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg></div><div class="name">Email</div><div class="status">Hilos completos</div></div>
+      <div class="ch-card fi s2"><div class="ico"><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div><div class="name">WhatsApp</div><div class="status">Business API</div></div>
+      <div class="ch-card fi s3"><div class="ico"><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></div><div class="name">Telegram</div><div class="status">Bots + canales</div></div>
+      <div class="ch-card fi"><div class="ico"><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div class="name">Meta</div><div class="status">Messenger + IG</div></div>
     </div>
   </div>
 </section>
