@@ -198,6 +198,23 @@ section{padding:5.5rem 2rem}
 .uc-entry .entry-result{margin-top:.6rem;font-size:.82rem;font-weight:600;color:var(--green);display:flex;align-items:center;gap:.4rem}
 .uc-entry .entry-result::before{content:'→'}
 
+/* SECTORS GRID */
+.sec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
+.sec-item{text-align:center;padding:1.4rem 1rem;border-radius:var(--radius);background:var(--bg);border:1px solid var(--border);transition:all .3s;cursor:default}
+.sec-item:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(77,101,255,.08)}
+.sec-item .si-ico{font-size:1.8rem;margin-bottom:.4rem}
+.sec-item .si-name{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
+.sec-item .si-desc{font-size:.68rem;color:var(--text3);line-height:1.4}
+
+/* PARTNERS */
+.part-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.part-card{background:var(--bg);border-radius:var(--radius);padding:2rem;border:1px solid var(--border);text-align:center;transition:all .3s}
+.part-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.part-ico{font-size:2rem;margin-bottom:.7rem}
+.part-name{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.part-lbl{font-size:.68rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:.7rem}
+.part-desc{font-size:.82rem;color:var(--text2);line-height:1.5}
+
 /* CTA */
 .cta-sec{background:var(--text);padding:5.5rem 2rem}
 .cta-sec .sec-title{color:#fff}
@@ -232,7 +249,8 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .mod-grid,.pr-grid{grid-template-columns:1fr}
+  .mod-grid,.pr-grid,.part-grid{grid-template-columns:1fr}
+  .sec-grid{grid-template-columns:repeat(2,1fr)}
   .ch-grid{grid-template-columns:repeat(3,1fr)}
   .nav-links{display:none}
   .mobile-menu-btn{display:block}
@@ -260,6 +278,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   .table-wrapper{border-radius:var(--radius-sm)}
   .tiers-tbl th,.tiers-tbl td,.cmp-tbl th,.cmp-tbl td{padding:.45rem .6rem;font-size:.72rem}
   .sec-title{font-size:1.3rem}
+  .sec-grid{grid-template-columns:1fr}
   .pr-price{font-size:2rem}
   .uc-entry{padding:.9rem 1rem}
   .cta-sec{padding:3.5rem 1.2rem}
@@ -278,13 +297,25 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
     "@type": "AggregateOffer",
     "priceCurrency": "EUR",
     "lowPrice": "49",
-    "highPrice": "99"
+    "highPrice": "99",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "99",
+      "priceCurrency": "EUR",
+      "billingDuration": "P1M"
+    }
   },
   "description": "Plataforma de análisis de comunicaciones con IA. 5 canales, transcripción automática, análisis de sentimiento. Comunicaciones ilimitadas.",
   "provider": {
     "@type": "Organization",
     "name": "FENIX IA SOLUTIONS",
-    "url": "https://web3.fenixia360.com"
+    "url": "https://web3.fenixia360.com",
+    "logo": "https://web3.fenixia360.com/logo.png"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127"
   }
 }
 </script>
@@ -303,6 +334,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
     <a href="#canales">Canales</a>
     <a href="#precios">Precios</a>
     <a href="#sectores">Sectores</a>
+    <a href="#partners">Partners</a>
     <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
   </div>
   <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Men&uacute;">Menu</button>
@@ -314,6 +346,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   <a href="#canales" onclick="toggleMobileMenu()">Canales</a>
   <a href="#precios" onclick="toggleMobileMenu()">Precios</a>
   <a href="#sectores" onclick="toggleMobileMenu()">Sectores</a>
+  <a href="#partners" onclick="toggleMobileMenu()">Partners</a>
   <a href="#contacto" onclick="toggleMobileMenu()">Contacto</a>
   <a href="#contacto" class="btn btn-primary" onclick="toggleMobileMenu()">Solicitar demo</a>
 </div>
@@ -401,11 +434,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
       <p class="sec-desc">Monitoreo en tiempo real de todas tus comunicaciones</p>
     </div>
     <div class="ch-grid">
-      <div class="ch-card fi"><div class="ico">&#128222;</div><div class="name">Llamadas</div><div class="status">Conectado</div></div>
-      <div class="ch-card fi s1"><div class="ico">&#9993;&#65039;</div><div class="name">Email</div><div class="status">Conectado</div></div>
-      <div class="ch-card fi s2"><div class="ico">&#128172;</div><div class="name">WhatsApp</div><div class="status">Conectado</div></div>
-      <div class="ch-card fi s3"><div class="ico">&#9992;&#65039;</div><div class="name">Telegram</div><div class="status">Conectado</div></div>
-      <div class="ch-card fi"><div class="ico">&#127760;</div><div class="name">Meta</div><div class="status">Conectado</div></div>
+      <div class="ch-card fi"><div class="ico">&#128222;</div><div class="name">Llamadas</div><div class="status">Transcripci&oacute;n + IA</div></div>
+      <div class="ch-card fi s1"><div class="ico">&#9993;&#65039;</div><div class="name">Email</div><div class="status">Hilos completos</div></div>
+      <div class="ch-card fi s2"><div class="ico">&#128172;</div><div class="name">WhatsApp</div><div class="status">Business API</div></div>
+      <div class="ch-card fi s3"><div class="ico">&#9992;&#65039;</div><div class="name">Telegram</div><div class="status">Bots + canales</div></div>
+      <div class="ch-card fi"><div class="ico">&#127760;</div><div class="name">Meta</div><div class="status">Messenger + IG</div></div>
     </div>
   </div>
 </section>
@@ -504,6 +537,25 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
       <span class="sec-label">Casos de uso</span>
       <h2 class="sec-title">Situaciones reales por sector</h2>
       <p class="sec-desc">Sin nombres. Solo lo que FENIX detecta y resuelve cada d&iacute;a</p>
+    </div>
+
+    <!-- 8-SECTOR GRID -->
+    <div class="sec-grid fi">
+      <div class="sec-item"><div class="si-ico">&#127973;</div><div class="si-name">Cl&iacute;nicas</div><div class="si-desc">Citas perdidas, seguimiento de pacientes, calidad de atenci&oacute;n</div></div>
+      <div class="sec-item"><div class="si-ico">&#127968;</div><div class="si-name">Inmobiliarias</div><div class="si-desc">Leads por WA y portales. Cada lead sin atender es comisi&oacute;n perdida</div></div>
+      <div class="sec-item"><div class="si-ico">&#128722;</div><div class="si-name">E-commerce</div><div class="si-desc">Postventa, devoluciones, experiencia cliente multicanal</div></div>
+      <div class="sec-item"><div class="si-ico">&#128188;</div><div class="si-name">Asesor&iacute;as</div><div class="si-desc">Comunicaci&oacute;n cr&iacute;tica con clientes. Contexto sin fisuras</div></div>
+      <div class="sec-item"><div class="si-ico">&#128295;</div><div class="si-name">Talleres</div><div class="si-desc">Citas por WA, seguimiento postventa, reclamaciones</div></div>
+      <div class="sec-item"><div class="si-ico">&#127891;</div><div class="si-name">Academias</div><div class="si-desc">Consultas, matr&iacute;culas, comunicaci&oacute;n multicanal</div></div>
+      <div class="sec-item"><div class="si-ico">&#128737;</div><div class="si-name">Seguros</div><div class="si-desc">Siniestros, renovaciones, nuevas p&oacute;lizas</div></div>
+      <div class="sec-item"><div class="si-ico">&#127960;</div><div class="si-name">Hoteler&iacute;a</div><div class="si-desc">Reservas, reclamaciones, experiencia del hu&eacute;sped</div></div>
+    </div>
+
+    <div style="margin-top:4rem">
+      <div class="sec-header" style="margin-bottom:0">
+        <span class="sec-label">Detalle</span>
+        <h3 class="sec-title" style="font-size:1.2rem">Casos de uso por sector</h3>
+      </div>
     </div>
 
     <div class="uc-nav">
@@ -662,6 +714,22 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   </div>
 </section>
 
+<!-- PARTNERS -->
+<section id="partners" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-label">Partners</span>
+      <h2 class="sec-title">Crece con nosotros</h2>
+      <p class="sec-desc">Programa de partners para consultoras, integradores y agencias</p>
+    </div>
+    <div class="part-grid">
+      <div class="part-card fi"><div class="part-ico">&#129309;</div><div class="part-name">Referral Partner</div><div class="part-lbl" style="color:var(--accent)">Comisi&oacute;n recurrente</div><p class="part-desc">Refiere clientes. Nosotros vendemos y gestionamos. T&uacute; cobras mientras el cliente siga activo</p></div>
+      <div class="part-card fi s1"><div class="part-ico">&#128200;</div><div class="part-name">Reseller Partner</div><div class="part-lbl" style="color:var(--green)">Descuento sobre PVP</div><p class="part-desc">Vende FENIX bajo tu marca. Factura al cliente. M&iacute;nimo 3 clientes/a&ntilde;o</p></div>
+      <div class="part-card fi s2"><div class="part-ico">&#9889;</div><div class="part-name">White-Label</div><div class="part-lbl" style="color:var(--purple)">Control total</div><p class="part-desc">Tu marca, tu precio, tu cliente. API + dashboard partner. M&iacute;n. 10 clientes/a&ntilde;o</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-sec" id="contacto">
   <div class="container" style="text-align:center">
@@ -673,14 +741,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
     <div class="cta-form" id="cta-form">
       <form style="display:flex;flex-direction:column;gap:.8rem" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'">
         <input type="text" placeholder="Tu nombre" required>
-        <input type="email" placeholder="email@empresa.com" required>
+        <input type="email" placeholder="Email corporativo" required>
         <input type="text" placeholder="Empresa y n&uacute;mero de empleados">
         <select>
-          <option>Selecciona un plan</option>
-          <option>FENIX Pulse</option>
-          <option>FENIX Connect</option>
-          <option>FENIX 360</option>
-          <option>Partners</option>
+          <option>Producto de inter&eacute;s</option>
+          <option>FENIX Pulse (Analytics)</option>
+          <option>FENIX Connect (Hub)</option>
+          <option>FENIX 360 (Bundle)</option>
+          <option>Programa de Partners</option>
         </select>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.85rem;font-size:.9rem">Solicitar demo &rarr;</button>
         <p style="font-size:.72rem;color:rgba(255,255,255,.35)">Sin compromiso. Te contactamos en &lt;24h</p>
@@ -705,6 +773,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
       <a href="#canales">Canales</a>
       <a href="#precios">Precios</a>
       <a href="#sectores">Sectores</a>
+      <a href="#partners">Partners</a>
       <a href="#contacto">Contacto</a>
     </div>
   </div>
