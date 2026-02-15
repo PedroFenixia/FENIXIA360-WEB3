@@ -879,11 +879,11 @@ footer{background:var(--bg);border-top:1px solid var(--card-border);padding:3rem
       <div class="trust-item"><strong>&#10003;</strong> API documentada</div>
     </div>
     <div class="cta-form" id="cta-form">
-      <form style="display:flex;flex-direction:column;gap:.8rem" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'">
-        <input type="text" placeholder="Tu nombre" required>
-        <input type="email" placeholder="Email corporativo" required>
-        <input type="text" placeholder="Empresa y n&uacute;mero de empleados">
-        <select>
+      <form id="holded-form" style="display:flex;flex-direction:column;gap:.8rem" onsubmit="submitToHolded(event)">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Email corporativo" required>
+        <input type="text" name="company" placeholder="Empresa y n&uacute;mero de empleados">
+        <select name="product">
           <option>Producto de inter&eacute;s</option>
           <option>FENIX Pulse (Analytics)</option>
           <option>FENIX Connect (Hub)</option>
@@ -959,6 +959,36 @@ function toggleMobileMenu(){
   document.querySelector('.mobile-menu').classList.toggle('active');
   document.querySelector('.mobile-overlay').classList.toggle('active');
   document.body.style.overflow=document.querySelector('.mobile-menu').classList.contains('active')?'hidden':'';
+}
+
+async function submitToHolded(e){
+  e.preventDefault();
+  const form=e.target;
+  const btn=form.querySelector('button[type="submit"]');
+  const orig=btn.textContent;
+  btn.textContent='Enviando...';btn.disabled=true;
+  const name=form.querySelector('[name="name"]').value;
+  const email=form.querySelector('[name="email"]').value;
+  const company=form.querySelector('[name="company"]').value;
+  const product=form.querySelector('[name="product"]').value;
+  const HKEY='3d8678c0eb9af596f7dd3221aafdc640';
+  try{
+    const cRes=await fetch('https://api.holded.com/api/invoicing/v1/contacts',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','key':HKEY},
+      body:JSON.stringify({name:company||name,email:email,tradeName:company||'',type:'client',contactPersons:[{name:name,email:email}],note:'Producto: '+product+' | Web: '+location.hostname})
+    });
+    if(cRes.ok){
+      const cData=await cRes.json();
+      await fetch('https://api.holded.com/api/crm/v1/leads',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','key':HKEY},
+        body:JSON.stringify({name:name+' - '+product,contactId:cData.id,notes:'Empresa: '+company+'\nProducto: '+product+'\nWeb: '+location.hostname})
+      }).catch(()=>{});
+    }
+  }catch(err){console.warn('Holded:',err.message)}
+  form.style.display='none';
+  document.getElementById('ok').style.display='block';
 }
 </script>
 </body>
