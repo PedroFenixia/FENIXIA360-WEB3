@@ -43,7 +43,7 @@
   --bg:#0a0a0a;--bg2:#111111;--bg3:#1a1a1a;--card:#0f0f0f;
   --green:#00ff88;--green2:#00cc6a;--green-dim:rgba(0,255,136,.08);--green-glow:rgba(0,255,136,.15);
   --amber:#ffaa00;--red:#ff4444;--cyan:#00ddff;--purple:#aa88ff;
-  --text:#b0b0b0;--text2:#888;--text3:#555;--white:#e8e8e8;
+  --text:#b8b8b8;--text2:#999;--text3:#777;--white:#e8e8e8;
   --border:#222;--border2:#333;
   --mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;
 }
@@ -327,14 +327,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-logo">
+    <img src="logo.png" alt="FENIX IA" style="height:28px;vertical-align:middle;margin-right:4px;filter:drop-shadow(0 0 4px rgba(0,255,136,.3))">
     <span class="nav-brand">FENIX_IA</span>
     <span class="nav-prompt">~/dashboard</span>
   </div>
   <div class="nav-links">
-    <a href="#modules">modules</a>
-    <a href="#channels">channels</a>
+    <a href="#modules">m&oacute;dulos</a>
+    <a href="#channels">canales</a>
     <a href="#pricing">config</a>
-    <a href="#sectors">processes</a>
+    <a href="#sectors">procesos</a>
     <a href="#contacto" class="btn btn-primary">$ init demo</a>
   </div>
   <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Men&uacute;">[menu]</button>
@@ -342,10 +343,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 
 <div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
 <div class="mobile-menu">
-  <a href="#modules" onclick="toggleMobileMenu()">modules</a>
-  <a href="#channels" onclick="toggleMobileMenu()">channels</a>
+  <a href="#modules" onclick="toggleMobileMenu()">m&oacute;dulos</a>
+  <a href="#channels" onclick="toggleMobileMenu()">canales</a>
   <a href="#pricing" onclick="toggleMobileMenu()">config</a>
-  <a href="#sectors" onclick="toggleMobileMenu()">processes</a>
+  <a href="#sectors" onclick="toggleMobileMenu()">procesos</a>
   <a href="#contacto" onclick="toggleMobileMenu()">contacto</a>
   <a href="#contacto" class="btn btn-primary" onclick="toggleMobileMenu()">$ init demo</a>
 </div>
@@ -361,9 +362,9 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
       <div class="term-body" id="hero-terminal">
         <div class="term-line"><span class="prompt">$ </span><span class="cmd">fenix</span> <span class="flag">--analyze</span> <span class="flag">--channels</span>=<span class="val">all</span></div>
         <div class="term-line output dim">&nbsp;</div>
-        <div class="term-line output info">&#9608; FENIX IA v3.6.0 &mdash; Communication Intelligence Engine</div>
+        <div class="term-line output info">&#9608; FENIX IA v3.6.0 &mdash; Motor de Inteligencia en Comunicaciones</div>
         <div class="term-line output dim">&nbsp;</div>
-        <div class="term-line output">Escaneando comunicaciones empresariales...</div>
+        <div class="term-line output">Analizando comunicaciones empresariales...</div>
         <div class="term-line output success">&#10003; 347 comunicaciones analizadas hoy</div>
         <div class="term-line output success">&#10003; 5 canales conectados (calls, email, wa, tg, meta)</div>
         <div class="term-line output success">&#10003; Sentimiento positivo: +78%</div>
@@ -404,7 +405,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
     <div class="mod-grid">
       <div class="mod-card fi">
         <div class="mod-name">@fenix/pulse</div>
-        <div class="mod-ver">v3.6.0 &bull; Analytics Engine</div>
+        <div class="mod-ver">v3.6.0 &bull; Motor de Analytics</div>
         <p class="mod-desc">Motor de analytics con IA. Transcribe, analiza sentimiento, detecta oportunidades y genera res&uacute;menes accionables</p>
         <ul class="mod-feats">
           <li>Transcripci&oacute;n autom&aacute;tica de llamadas</li>
@@ -418,7 +419,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
       </div>
       <div class="mod-card fi s1">
         <div class="mod-name">@fenix/connect</div>
-        <div class="mod-ver">v3.6.0 &bull; Unified Hub</div>
+        <div class="mod-ver">v3.6.0 &bull; Hub Unificado</div>
         <p class="mod-desc">Hub de comunicaciones unificado. 5 canales en una sola bandeja. Asignaci&oacute;n autom&aacute;tica, historial completo</p>
         <ul class="mod-feats">
           <li>Bandeja unificada 5 canales</li>
@@ -432,7 +433,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
       </div>
       <div class="mod-card fi s2">
         <div class="mod-name">@fenix/360</div>
-        <div class="mod-ver">v3.6.0 &bull; Full Bundle</div>
+        <div class="mod-ver">v3.6.0 &bull; Bundle Completo</div>
         <p class="mod-desc">Pulse + Connect en un solo paquete. Visi&oacute;n 360&deg; real del cliente. M&aacute;ximo poder, m&aacute;ximo ahorro</p>
         <ul class="mod-feats">
           <li>Todo de @fenix/pulse</li>
@@ -454,7 +455,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 <section id="channels" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
   <div class="container">
     <div class="sec-header" style="text-align:center">
-      <div class="sec-comment">Canales activos en el sistema</div>
+      <div class="sec-comment">Canales conectados en el sistema</div>
       <h2 class="sec-title">$ fenix status --channels</h2>
       <p class="sec-desc" style="margin:0 auto">5 canales conectados. 0 puntos ciegos. Monitoreo en tiempo real</p>
     </div>
@@ -493,13 +494,13 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
       <p class="sec-desc">Comunicaciones ilimitadas. Sin costes ocultos. Onboarding incluido</p>
     </div>
     <div class="pr-config">
-      <div class="pr-config-head"><span>pricing.yml</span><span>3 plans</span></div>
+      <div class="pr-config-head"><span>pricing.yml</span><span>3 planes</span></div>
       <div class="pr-config-body">
         <div class="pr-plans">
           <div class="pr-plan fi">
             <div class="pr-label t1">@fenix/pulse</div>
             <div class="pr-price">&euro;79<span>/mes</span></div>
-            <div class="pr-meta">1 user &bull; unlimited comms</div>
+            <div class="pr-meta">1 usuario &bull; comms ilimitadas</div>
             <ul class="pr-list">
               <li>Analytics IA multicanal</li>
               <li>Transcripci&oacute;n autom&aacute;tica</li>
@@ -512,7 +513,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
           <div class="pr-plan featured fi s1">
             <div class="pr-label t3">@fenix/360</div>
             <div class="pr-price">&euro;99<span>/mes</span></div>
-            <div class="pr-meta">1 user &bull; unlimited comms &bull; full bundle</div>
+            <div class="pr-meta">1 usuario &bull; comms ilimitadas &bull; bundle completo</div>
             <ul class="pr-list">
               <li>Todo de Pulse + Connect</li>
               <li>Hub unificado 5 canales</li>
@@ -525,7 +526,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
           <div class="pr-plan fi s2">
             <div class="pr-label t2">@fenix/connect</div>
             <div class="pr-price">&euro;49<span>/mes</span></div>
-            <div class="pr-meta">1 user &bull; unlimited comms</div>
+            <div class="pr-meta">1 usuario &bull; comms ilimitadas</div>
             <ul class="pr-list">
               <li>Hub unificado 5 canales</li>
               <li>Asignaci&oacute;n autom&aacute;tica</li>
@@ -541,7 +542,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
     <div class="tbl-section">
       <h3>Todos los tramos</h3>
       <div class="table-wrapper">
-        <table class="tiers-tbl"><thead><tr><th>users</th><th>pulse</th><th>connect</th><th>360</th><th>onb. pulse</th><th>onb. connect</th><th>onb. 360</th><th>comms</th></tr></thead>
+        <table class="tiers-tbl"><thead><tr><th>usuarios</th><th>pulse</th><th>connect</th><th>360</th><th>onb. pulse</th><th>onb. connect</th><th>onb. 360</th><th>comunic.</th></tr></thead>
         <tbody>
           <tr><td>1</td><td>79&euro;</td><td>49&euro;</td><td class="hl">99&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
           <tr><td>2</td><td>119&euro;</td><td>79&euro;</td><td class="hl">159&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
@@ -561,12 +562,12 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 <section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
   <div class="container" style="text-align:center">
     <div class="sec-header" style="text-align:center">
-      <div class="sec-comment">Benchmark vs competidores</div>
+      <div class="sec-comment">Comparativa vs competidores</div>
       <h2 class="sec-title">$ fenix benchmark --compare</h2>
       <p class="sec-desc" style="margin:0 auto">2.6x-9x m&aacute;s barato. El &uacute;nico con 5 canales</p>
     </div>
     <div class="table-wrapper">
-      <table class="cmp-tbl"><thead><tr><th>platform</th><th>&euro;/user</th><th>calls</th><th>email</th><th>wa</th><th>tg</th><th>meta</th></tr></thead>
+      <table class="cmp-tbl"><thead><tr><th>plataforma</th><th>&euro;/user</th><th>llamadas</th><th>email</th><th>wa</th><th>tg</th><th>meta</th></tr></thead>
       <tbody>
         <tr><td>Gong</td><td>~275&euro;</td><td class="v">&#10003;</td><td class="v">&#10003;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td></tr>
         <tr><td>Ringover</td><td>~83&euro;</td><td class="v">&#10003;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td></tr>
@@ -582,7 +583,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 <section id="sectors">
   <div class="container">
     <div class="sec-header">
-      <div class="sec-comment">Casos de uso por sector - logs reales del sistema</div>
+      <div class="sec-comment">Casos de uso por sector &mdash; logs reales del sistema</div>
       <h2 class="sec-title">$ fenix logs --use-cases --verbose</h2>
       <p class="sec-desc">Situaciones reales. Sin nombres. Solo lo que FENIX detecta y resuelve cada d&iacute;a</p>
     </div>
@@ -786,21 +787,21 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
 <!-- FOOTER -->
 <footer>
   <div class="ft-inner">
-    <div class="ft-brand">FENIX_IA</div>
+    <div class="ft-brand"><img src="logo.png" alt="FENIX IA" style="height:20px;vertical-align:middle;margin-right:4px;filter:drop-shadow(0 0 3px rgba(0,255,136,.25))">FENIX_IA</div>
     <div class="ft-links">
-      <a href="#modules">modules</a>
-      <a href="#channels">channels</a>
+      <a href="#modules">m&oacute;dulos</a>
+      <a href="#channels">canales</a>
       <a href="#pricing">config</a>
-      <a href="#sectors">processes</a>
+      <a href="#sectors">procesos</a>
       <a href="#contacto">init</a>
     </div>
   </div>
   <div class="ft-legal">
-    <a href="https://www.fenixia.tech/terminos" target="_blank">terms</a>
-    <a href="https://www.fenixia.tech/privacidad" target="_blank">privacy</a>
+    <a href="https://www.fenixia.tech/terminos" target="_blank">t&eacute;rminos</a>
+    <a href="https://www.fenixia.tech/privacidad" target="_blank">privacidad</a>
     <a href="https://www.fenixia.tech/cookies" target="_blank">cookies</a>
   </div>
-  <div class="ft-copy"># &copy; 2026 FENIX IA SOLUTIONS &mdash; fenixia.tech &mdash; All rights reserved &mdash; exit 0</div>
+  <div class="ft-copy"># &copy; 2026 FENIX IA SOLUTIONS &mdash; fenixia.tech &mdash; Todos los derechos reservados &mdash; exit 0</div>
 </footer>
 
 <script>
