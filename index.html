@@ -3,32 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FENIX IA — Hacemos visible lo que tus comunicaciones esconden</title>
+<title>FENIX IA — $ fenix --analyze --channels=all</title>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Analiza con IA todas tus comunicaciones (llamadas, emails, WhatsApp, Telegram y Meta) desde 99€/mes. Transcripción automática, análisis de sentimiento y hub unificado de comunicaciones para PYMEs.">
-<meta name="keywords" content="análisis comunicaciones IA, transcripción llamadas, análisis sentimiento, hub comunicaciones, WhatsApp Business, CRM comunicaciones, analytics multicanal, FENIX IA">
+<meta name="description" content="FENIX IA: Analiza todas tus comunicaciones empresariales con IA. 5 canales, transcripción automática, análisis de sentimiento. Desde 99€/mes. Comunicaciones ilimitadas.">
+<meta name="keywords" content="análisis comunicaciones IA, transcripción llamadas, hub comunicaciones, analytics multicanal, FENIX IA, API comunicaciones">
 <meta name="author" content="FENIX IA SOLUTIONS">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Spanish">
-<meta name="theme-color" content="#3ea99b">
-<link rel="canonical" href="https://www.fenixia360.com/">
+<meta name="theme-color" content="#00ff88">
+<link rel="canonical" href="https://web3.fenixia360.com/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.fenixia360.com/">
-<meta property="og:title" content="FENIX IA — Analytics de Comunicaciones con IA desde 99€/mes">
-<meta property="og:description" content="Analiza con IA todas tus comunicaciones (llamadas, emails, WhatsApp, Telegram y Meta). Transcripción automática, análisis de sentimiento y hub unificado. Comunicaciones ilimitadas.">
-<meta property="og:image" content="https://www.fenixia360.com/og-image.png">
+<meta property="og:url" content="https://web3.fenixia360.com/">
+<meta property="og:title" content="FENIX IA — Analytics de comunicaciones con IA">
+<meta property="og:description" content="5 canales. IA. Comunicaciones ilimitadas. Desde 99€/mes. fenix --analyze --channels=all">
+<meta property="og:image" content="https://web3.fenixia360.com/og-image.png">
 <meta property="og:site_name" content="FENIX IA">
 <meta property="og:locale" content="es_ES">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.fenixia360.com/">
-<meta name="twitter:title" content="FENIX IA — Analytics de Comunicaciones con IA">
-<meta name="twitter:description" content="Analiza con IA todas tus comunicaciones desde 99€/mes. Transcripción automática, análisis de sentimiento y hub unificado de 5 canales.">
-<meta name="twitter:image" content="https://www.fenixia360.com/twitter-card.png">
+<meta name="twitter:url" content="https://web3.fenixia360.com/">
+<meta name="twitter:title" content="FENIX IA — $ fenix --analyze --channels=all">
+<meta name="twitter:description" content="Analytics de comunicaciones con IA. 5 canales. Ilimitadas. 99€/mes.">
+<meta name="twitter:image" content="https://web3.fenixia360.com/twitter-card.png">
 
 <!-- Preconnect & DNS Prefetch -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,245 +36,254 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#0b0f14;--bg2:#12171f;--bg3:#1a2030;--card:#151c28;
-  --teal:#3ea99b;--teal-bright:#55b1a7;--teal-glow:rgba(62,169,155,.12);--teal-glow2:rgba(62,169,155,.06);
-  --silver:#c4c8c4;--silver-light:#e2e2e2;--white:#f0f2f0;
-  --gray:#7a8494;--gray2:#3d4a5c;--gray3:#2a3040;
-  --purple:#8b7cc8;--green:#5cb88a;--orange:#d4944a;--red:#c85454;
-  --font:'Sora',sans-serif;--mono:'IBM Plex Mono',monospace;
+  --bg:#0a0a0a;--bg2:#111111;--bg3:#1a1a1a;--card:#0f0f0f;
+  --green:#00ff88;--green2:#00cc6a;--green-dim:rgba(0,255,136,.08);--green-glow:rgba(0,255,136,.15);
+  --amber:#ffaa00;--red:#ff4444;--cyan:#00ddff;--purple:#aa88ff;
+  --text:#b0b0b0;--text2:#888;--text3:#555;--white:#e8e8e8;
+  --border:#222;--border2:#333;
+  --mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;
 }
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--font);background:var(--bg);color:var(--silver);line-height:1.65;overflow-x:hidden}
-a{color:var(--teal);text-decoration:none;transition:all .25s}
-a:hover{color:var(--teal-bright)}
-::selection{background:var(--teal);color:var(--bg)}
+body{font-family:var(--mono);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--green);text-decoration:none;transition:all .2s}
+a:hover{color:var(--green2);text-shadow:0 0 8px rgba(0,255,136,.3)}
+::selection{background:var(--green);color:var(--bg)}
 img{max-width:100%}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(11,15,20,.85);backdrop-filter:blur(24px) saturate(1.2);border-bottom:1px solid rgba(62,169,155,.06);transition:all .35s}
-nav.scrolled{padding:.65rem 2.5rem;box-shadow:0 4px 30px rgba(0,0,0,.3)}
-.nav-logo{display:flex;align-items:center;gap:.7rem}
-.nav-logo img{height:56px;width:56px;object-fit:contain;border-radius:4px}
-.nav-brand{font-weight:800;font-size:1.25rem;color:var(--silver-light);letter-spacing:1.5px}
-.nav-brand em{font-style:normal;color:var(--teal)}
-.nav-links{display:flex;gap:2.2rem;align-items:center}
-.nav-links a{color:var(--gray);font-weight:500;font-size:.82rem;letter-spacing:.8px;text-transform:uppercase;transition:color .25s}
-.nav-links a:hover{color:var(--teal-bright)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.7rem;border-radius:6px;font-weight:600;font-size:.88rem;transition:all .3s;cursor:pointer;border:none;font-family:var(--font);letter-spacing:.3px}
-.btn-primary{background:var(--teal);color:#fff !important;box-shadow:0 0 20px rgba(62,169,155,.15)}
-.btn-primary:hover{background:var(--teal-bright);color:#fff !important;transform:translateY(-1px);box-shadow:0 4px 25px rgba(62,169,155,.25)}
-.btn-outline{background:transparent;color:var(--teal);border:1.5px solid rgba(62,169,155,.4)}
-.btn-outline:hover{background:rgba(62,169,155,.08);border-color:var(--teal)}
-.btn-ghost{background:rgba(62,169,155,.06);color:var(--teal);border:1px solid rgba(62,169,155,.12)}
-.btn-ghost:hover{background:rgba(62,169,155,.12)}
+/* SCANLINES */
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,136,.008) 2px,rgba(0,255,136,.008) 4px);opacity:.6}
 
-/* Mobile Menu */
-.mobile-menu-btn{display:none;background:none;border:none;color:var(--teal);font-size:1.5rem;cursor:pointer;padding:.5rem;z-index:101}
-.mobile-menu{position:fixed;top:0;left:-100%;width:80%;max-width:300px;height:100vh;background:var(--bg2);padding:5rem 2rem 2rem;transition:left .3s ease;z-index:99;border-right:1px solid rgba(62,169,155,.15)}
+/* CURSOR BLINK */
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.cursor{display:inline-block;width:8px;height:1.1em;background:var(--green);vertical-align:text-bottom;animation:blink 1s step-end infinite;margin-left:2px}
+@keyframes glow-pulse{0%,100%{text-shadow:0 0 4px rgba(0,255,136,.3)}50%{text-shadow:0 0 12px rgba(0,255,136,.6),0 0 24px rgba(0,255,136,.2)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:all .3s;font-size:.82rem}
+nav.scrolled{box-shadow:0 0 20px rgba(0,255,136,.05)}
+.nav-logo{display:flex;align-items:center;gap:.5rem}
+.nav-brand{font-weight:700;font-size:.95rem;color:var(--green);letter-spacing:1px}
+.nav-prompt{color:var(--text3);font-size:.75rem}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{color:var(--text2);font-size:.78rem;letter-spacing:.5px}
+.nav-links a:hover{color:var(--green)}
+.nav-links a::before{content:'> ';color:var(--text3)}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.2rem;border-radius:3px;font-weight:600;font-size:.8rem;transition:all .2s;cursor:pointer;border:none;font-family:var(--mono);letter-spacing:.3px}
+.btn-primary{background:var(--green);color:var(--bg) !important;box-shadow:0 0 15px rgba(0,255,136,.15)}
+.btn-primary:hover{box-shadow:0 0 25px rgba(0,255,136,.3);transform:translateY(-1px);color:var(--bg) !important}
+.btn-outline{background:transparent;color:var(--green);border:1px solid var(--border2)}
+.btn-outline:hover{border-color:var(--green);background:var(--green-dim)}
+
+/* MOBILE MENU */
+.mobile-menu-btn{display:none;background:none;border:1px solid var(--border2);color:var(--green);font-size:.85rem;cursor:pointer;padding:.4rem .8rem;z-index:101;font-family:var(--mono);border-radius:2px}
+.mobile-menu{position:fixed;top:0;left:-100%;width:85%;max-width:320px;height:100vh;background:var(--bg);padding:4.5rem 1.5rem 2rem;transition:left .3s ease;z-index:99;border-right:1px solid var(--green-dim)}
 .mobile-menu.active{left:0}
-.mobile-overlay{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,.7);opacity:0;visibility:hidden;transition:all .3s;z-index:98}
+.mobile-overlay{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(0,0,0,.8);opacity:0;visibility:hidden;transition:all .3s;z-index:98}
 .mobile-overlay.active{opacity:1;visibility:visible}
-.mobile-menu a{display:block;padding:1rem 0;color:var(--silver);font-size:1rem;border-bottom:1px solid var(--gray3)}
-.mobile-menu a:hover{color:var(--teal)}
-.mobile-menu .btn{margin-top:1.5rem;width:100%;text-align:center}
+.mobile-menu a{display:block;padding:.75rem 0;color:var(--text);font-size:.85rem;border-bottom:1px solid var(--border)}
+.mobile-menu a::before{content:'$ ';color:var(--green)}
+.mobile-menu a:hover{color:var(--green)}
+.mobile-menu .btn{margin-top:1.5rem;width:100%;text-align:center;justify-content:center}
 
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:7rem 2.5rem 5rem}
-.hero::before{content:'';position:absolute;top:-25%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(62,169,155,.05) 0%,transparent 70%);pointer-events:none}
-.hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center;position:relative;z-index:1}
-.hero h1{font-size:3.2rem;font-weight:800;line-height:1.12;color:var(--white);margin-bottom:1.4rem;letter-spacing:-.8px}
-.hero h1 .hl{color:var(--teal-bright)}
-.hero .sub{font-size:1.08rem;color:var(--gray);line-height:1.75;margin-bottom:2.2rem;max-width:500px}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-.hero-stats{display:flex;gap:3rem;margin-top:2.8rem;padding-top:2rem;border-top:1px solid var(--gray2)}
-.stat-val{font-size:1.6rem;font-weight:700;color:var(--teal);font-family:var(--mono)}
-.stat-lbl{font-size:.7rem;color:var(--gray);text-transform:uppercase;letter-spacing:1.2px;margin-top:.15rem}
+/* HERO TERMINAL */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:7rem 2rem 5rem}
+.hero-inner{max-width:960px;margin:0 auto;width:100%}
+.terminal{background:var(--card);border:1px solid var(--border2);border-radius:6px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(0,255,136,.03)}
+.term-bar{display:flex;align-items:center;gap:8px;padding:.6rem 1rem;background:var(--bg3);border-bottom:1px solid var(--border)}
+.term-dots{display:flex;gap:6px}
+.term-dots span{width:10px;height:10px;border-radius:50%}
+.term-dots span:nth-child(1){background:#ff5f57}
+.term-dots span:nth-child(2){background:#febc2e}
+.term-dots span:nth-child(3){background:#28c840}
+.term-title{font-size:.7rem;color:var(--text3);margin-left:.8rem}
+.term-body{padding:1.5rem;font-size:.88rem;line-height:2}
+.term-line{margin-bottom:.15rem}
+.prompt{color:var(--green)}
+.cmd{color:var(--white);font-weight:600}
+.flag{color:var(--cyan)}
+.val{color:var(--amber)}
+.output{color:var(--text);padding-left:1rem}
+.output.success{color:var(--green)}
+.output.warn{color:var(--amber)}
+.output.error{color:var(--red)}
+.output.info{color:var(--cyan)}
+.output.dim{color:var(--text3)}
+.highlight{color:var(--green);font-weight:700;animation:glow-pulse 3s ease-in-out infinite}
+.comment{color:var(--text3);font-style:italic}
+.hero-below{margin-top:2.5rem;display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .v{font-size:1.6rem;font-weight:800;color:var(--green);font-family:var(--mono);text-shadow:0 0 8px rgba(0,255,136,.2)}
+.hero-stat .l{font-size:.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:.15rem}
+.hero-ctas{margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap}
 
-.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
-.hero-glow{width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(62,169,155,.08),transparent 65%);position:absolute;animation:glow-float 8s ease-in-out infinite}
-@keyframes glow-float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-12px) scale(1.03)}}
-.dash{position:relative;width:100%;max-width:480px;background:var(--card);border-radius:14px;border:1px solid rgba(62,169,155,.08);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.02) inset}
-.dash-bar{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.3rem;border-bottom:1px solid var(--gray3)}
-.dash-bar span{font-size:.78rem;font-weight:600;color:var(--silver);letter-spacing:.5px}
-.dash-dots{display:flex;gap:5px}.dash-dots i{width:7px;height:7px;border-radius:50%;display:block}
-.dash-dots i:nth-child(1){background:var(--red)}.dash-dots i:nth-child(2){background:var(--orange)}.dash-dots i:nth-child(3){background:var(--green)}
-.dash-body{padding:1.3rem}
-.d-row{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;border-radius:8px;background:rgba(62,169,155,.03);border:1px solid rgba(62,169,155,.06);margin-bottom:.65rem;transition:background .2s}
-.d-row:hover{background:rgba(62,169,155,.06)}
-.d-lbl{font-size:.78rem;color:var(--gray)}
-.d-val{font-size:1rem;font-weight:700;font-family:var(--mono)}
-.d-val.up{color:var(--green)}.d-val.dn{color:var(--red)}.d-val.tl{color:var(--teal)}
-.d-channels{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin-top:.8rem}
-.d-ch{text-align:center;padding:.55rem .2rem;border-radius:6px;background:var(--bg3);font-size:.6rem;color:var(--gray);transition:all .3s;cursor:default}
-.d-ch:hover{background:rgba(62,169,155,.08);color:var(--teal-bright)}
-.d-ch .ico{font-size:1rem;display:block;margin-bottom:.15rem}
+/* SECTIONS */
+section{padding:5rem 2rem}
+.container{max-width:960px;margin:0 auto}
+.sec-header{margin-bottom:2.5rem}
+.sec-comment{color:var(--text3);font-size:.78rem;margin-bottom:.3rem}
+.sec-comment::before{content:'// '}
+.sec-title{font-size:1.5rem;font-weight:700;color:var(--green);letter-spacing:-.3px;font-family:var(--sans)}
+.sec-desc{color:var(--text2);font-size:.85rem;margin-top:.4rem;max-width:600px}
 
-section{padding:6rem 2.5rem}
-.container{max-width:1180px;margin:0 auto}
-.tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:.8rem;padding:.3rem .85rem;border-radius:100px;background:rgba(62,169,155,.06);border:1px solid rgba(62,169,155,.1)}
-.stitle{font-size:2.3rem;font-weight:800;color:var(--white);line-height:1.18;margin-bottom:1rem;letter-spacing:-.4px}
-.sdesc{color:var(--gray);font-size:1rem;max-width:560px;line-height:1.75}
-.center{text-align:center}.center .sdesc{margin:0 auto}
+/* CODE BLOCKS */
+.code-block{background:var(--card);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.2rem;transition:all .3s}
+.code-block:hover{border-color:rgba(0,255,136,.2)}
+.code-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1rem;background:var(--bg3);border-bottom:1px solid var(--border);font-size:.7rem;color:var(--text3)}
+.code-lang{color:var(--cyan);font-weight:600}
+.code-body{padding:1.2rem 1rem;font-size:.82rem;line-height:1.8}
+.ln{color:var(--text3);display:inline-block;width:2.5rem;text-align:right;margin-right:1rem;user-select:none}
+.key{color:var(--purple)}.str{color:var(--amber)}.fn{color:var(--cyan)}.bool{color:var(--red)}.num{color:var(--green)}
 
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
-.pcard{background:var(--card);border-radius:14px;padding:2.3rem 1.8rem;border:1px solid var(--gray3);position:relative;overflow:hidden;transition:all .4s ease}
-.pcard:hover{border-color:rgba(62,169,155,.25);transform:translateY(-3px);box-shadow:0 16px 50px rgba(0,0,0,.25)}
-.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
-.pcard:nth-child(1)::before{background:linear-gradient(90deg,var(--teal),var(--teal-bright))}
-.pcard:nth-child(2)::before{background:linear-gradient(90deg,var(--green),#78d4a6)}
-.pcard:nth-child(3)::before{background:linear-gradient(90deg,var(--purple),#a99ad8)}
-.pname{font-size:1.3rem;font-weight:800;color:var(--white);margin-bottom:.25rem}
-.pname .a1{color:var(--teal)}.pname .a2{color:var(--green)}.pname .a3{color:var(--purple)}
-.ptype{font-size:.72rem;color:var(--gray);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:1.1rem}
-.pdesc{color:var(--silver);font-size:.9rem;line-height:1.65;margin-bottom:1.3rem}
-.pfeats{list-style:none;display:flex;flex-direction:column;gap:.55rem}
-.pfeats li{display:flex;align-items:flex-start;gap:.5rem;font-size:.82rem;color:var(--gray)}
-.pfeats li::before{content:'\2713';color:var(--teal);font-weight:700;flex-shrink:0}
+/* PRODUCTS AS MODULES */
+.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.mod-card{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:1.5rem 1.2rem;transition:all .3s;position:relative;overflow:hidden}
+.mod-card:hover{border-color:var(--green);box-shadow:0 0 20px rgba(0,255,136,.05)}
+.mod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.mod-card:nth-child(1)::before{background:var(--green)}
+.mod-card:nth-child(2)::before{background:var(--cyan)}
+.mod-card:nth-child(3)::before{background:var(--purple)}
+.mod-name{font-size:.95rem;font-weight:700;margin-bottom:.2rem}
+.mod-card:nth-child(1) .mod-name{color:var(--green)}
+.mod-card:nth-child(2) .mod-name{color:var(--cyan)}
+.mod-card:nth-child(3) .mod-name{color:var(--purple)}
+.mod-ver{font-size:.65rem;color:var(--text3);margin-bottom:.8rem}
+.mod-desc{font-size:.78rem;color:var(--text2);line-height:1.6;margin-bottom:.8rem}
+.mod-feats{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.mod-feats li{font-size:.72rem;color:var(--text3)}
+.mod-feats li::before{content:'+ ';color:var(--green);font-weight:700}
+.mod-install{margin-top:1rem;padding:.5rem .8rem;background:var(--bg3);border-radius:3px;font-size:.7rem;color:var(--text2);border:1px solid var(--border)}
+.mod-install .cmd-prefix{color:var(--green)}
 
-.ch-strip{display:flex;justify-content:center;gap:2rem;margin-top:2.5rem;flex-wrap:wrap}
-.ch-item{text-align:center;padding:1.3rem 1.8rem;border-radius:10px;background:var(--card);border:1px solid var(--gray3);transition:all .3s;min-width:110px}
-.ch-item:hover{border-color:rgba(62,169,155,.2);background:rgba(62,169,155,.03)}
-.ch-item .ci{font-size:1.8rem;margin-bottom:.4rem}
-.ch-item .cn{font-size:.82rem;font-weight:600;color:var(--white)}
-.ch-item .cd{font-size:.65rem;color:var(--gray);margin-top:.15rem}
+/* CHANNELS MATRIX */
+.ch-matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2rem}
+.ch-node{text-align:center;padding:1.2rem .5rem;border:1px solid var(--border);border-radius:4px;background:var(--card);transition:all .3s;cursor:default}
+.ch-node:hover{border-color:var(--green);background:var(--green-dim)}
+.ch-node .ico{font-size:1.5rem;margin-bottom:.3rem}
+.ch-node .name{font-size:.72rem;font-weight:600;color:var(--white)}
+.ch-node .status{font-size:.6rem;color:var(--green);margin-top:.15rem;display:flex;align-items:center;justify-content:center;gap:.25rem}
+.ch-node .status::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite}
 
-#pricing{background:var(--bg2)}
-.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
-.pr-card{background:var(--card);border-radius:14px;padding:2.3rem 1.8rem;border:1px solid var(--gray3);position:relative;transition:all .4s}
-.pr-card.feat{border-color:rgba(62,169,155,.3);box-shadow:0 0 40px rgba(62,169,155,.06)}
-.pr-card.feat::before{content:'RECOMENDADO';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--teal);color:var(--bg);font-size:.62rem;font-weight:700;padding:.25rem .9rem;border-radius:100px;letter-spacing:1.5px}
-.pr-name{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.5rem}
-.pr-name.t1{color:var(--teal)}.pr-name.t2{color:var(--green)}.pr-name.t3{color:var(--purple)}
-.pr-amt{display:flex;align-items:baseline;gap:.25rem;margin-bottom:.15rem}
-.pr-amt .cur{font-size:1.1rem;color:var(--gray);font-weight:600}
-.pr-amt .num{font-size:2.8rem;font-weight:800;color:var(--white);font-family:var(--mono);letter-spacing:-2px}
-.pr-amt .per{font-size:.8rem;color:var(--gray)}
-.pr-users{font-size:.8rem;color:var(--gray);margin-bottom:1.4rem}
-.pr-feats{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.8rem}
-.pr-feats li{font-size:.84rem;color:var(--silver);display:flex;align-items:center;gap:.45rem}
-.pr-feats li::before{content:'\2713';color:var(--teal);font-weight:700}
-.table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:1.5rem}
-.tiers-tbl{width:100%;min-width:600px;border-collapse:collapse}
-.tiers-tbl th{text-align:left;padding:.75rem 1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray);border-bottom:2px solid var(--gray3)}
-.tiers-tbl td{padding:.65rem 1rem;font-size:.85rem;border-bottom:1px solid rgba(61,74,92,.2);color:var(--silver)}
-.tiers-tbl tr:hover td{background:rgba(62,169,155,.02)}
-.tiers-tbl .hl{color:var(--teal);font-weight:700;font-family:var(--mono)}
+/* PRICING AS CONFIG */
+.pr-config{background:var(--card);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-top:2rem}
+.pr-config-head{padding:.5rem 1rem;background:var(--bg3);border-bottom:1px solid var(--border);font-size:.7rem;color:var(--text3);display:flex;justify-content:space-between}
+.pr-config-body{padding:1.2rem}
+.pr-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.pr-plan{border:1px solid var(--border);border-radius:3px;padding:1.2rem;transition:all .3s}
+.pr-plan:hover{border-color:rgba(0,255,136,.3)}
+.pr-plan.featured{border-color:var(--green);box-shadow:0 0 15px rgba(0,255,136,.05);position:relative}
+.pr-plan.featured::after{content:'# RECOMENDADO';position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--green);color:var(--bg);font-size:.58rem;font-weight:700;padding:.15rem .6rem;border-radius:2px;letter-spacing:1px}
+.pr-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.5rem}
+.pr-label.t1{color:var(--green)}.pr-label.t2{color:var(--cyan)}.pr-label.t3{color:var(--purple)}
+.pr-price{font-size:2rem;font-weight:800;color:var(--white);letter-spacing:-1px;margin-bottom:.1rem}
+.pr-price span{font-size:.75rem;color:var(--text3);font-weight:400}
+.pr-meta{font-size:.68rem;color:var(--text3);margin-bottom:1rem}
+.pr-list{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem}
+.pr-list li{font-size:.72rem;color:var(--text2)}
+.pr-list li::before{content:'[x] ';color:var(--green);font-weight:700}
+.tbl-section{margin-top:2rem}
+.tbl-section h3{font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:.8rem}
+.tbl-section h3::before{content:'## ';color:var(--green)}
+.tiers-tbl{width:100%;min-width:600px;border-collapse:collapse;font-size:.78rem}
+.tiers-tbl th{text-align:left;padding:.5rem .8rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);border-bottom:1px solid var(--border2);font-weight:600}
+.tiers-tbl td{padding:.45rem .8rem;border-bottom:1px solid var(--border);color:var(--text2)}
+.tiers-tbl tr:hover td{background:var(--green-dim)}
+.tiers-tbl .hl{color:var(--green);font-weight:700}
+.table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
-.cmp-tbl{width:100%;min-width:500px;margin-top:2rem;border-collapse:separate;border-spacing:0;border-radius:10px;overflow:hidden;border:1px solid var(--gray3)}
-.cmp-tbl th{background:var(--bg3);padding:.75rem 1rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.7px;color:var(--gray);text-align:left}
-.cmp-tbl td{padding:.65rem 1rem;font-size:.8rem;border-top:1px solid rgba(61,74,92,.15);color:var(--silver)}
-.cmp-tbl tr:last-child td{background:rgba(62,169,155,.04);color:var(--teal-bright);font-weight:600}
+/* COMPARISON */
+.cmp-tbl{width:100%;min-width:500px;margin-top:1.5rem;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:4px;overflow:hidden;font-size:.78rem}
+.cmp-tbl th{background:var(--bg3);padding:.5rem .8rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);text-align:left;font-weight:600}
+.cmp-tbl td{padding:.45rem .8rem;border-top:1px solid var(--border);color:var(--text2)}
+.cmp-tbl tr:last-child{background:var(--green-dim)}
+.cmp-tbl tr:last-child td{color:var(--green);font-weight:600}
 .cmp-tbl .x{color:var(--red)}.cmp-tbl .v{color:var(--green)}
 
-.sec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3rem}
-.sec-card{background:var(--card);border-radius:10px;padding:1.6rem 1.3rem;border:1px solid var(--gray3);transition:all .3s}
-.sec-card:hover{border-color:rgba(62,169,155,.2);transform:translateY(-2px)}
-.sec-icon{font-size:1.8rem;margin-bottom:.7rem}
-.sec-name{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:.35rem}
-.sec-desc{font-size:.78rem;color:var(--gray);line-height:1.5}
+/* SECTORS AS PROCESSES */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:2rem}
+.proc-card{background:var(--card);border:1px solid var(--border);border-radius:3px;padding:1rem .8rem;transition:all .3s}
+.proc-card:hover{border-color:rgba(0,255,136,.2);background:var(--green-dim)}
+.proc-icon{font-size:1.2rem;margin-bottom:.4rem}
+.proc-name{font-size:.78rem;font-weight:700;color:var(--white);margin-bottom:.2rem}
+.proc-desc{font-size:.68rem;color:var(--text3);line-height:1.5}
+.proc-pid{font-size:.6rem;color:var(--green);margin-top:.4rem}
 
-.part-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
-.part-card{background:var(--card);border-radius:14px;padding:2rem;border:1px solid var(--gray3);text-align:center;transition:all .3s}
-.part-card:hover{border-color:rgba(62,169,155,.2)}
-.part-ico{font-size:2.2rem;margin-bottom:.8rem}
-.part-name{font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.6rem}
-.part-lbl{font-size:.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:.8rem}
-.part-desc{font-size:.82rem;color:var(--gray);line-height:1.5}
+/* CTA */
+.cta-sec{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.cta-terminal{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.cta-term-bar{display:flex;align-items:center;gap:6px;padding:.5rem .8rem;background:var(--bg3);border-bottom:1px solid var(--border);font-size:.68rem;color:var(--text3)}
+.cta-term-dots{display:flex;gap:5px}
+.cta-term-dots span{width:8px;height:8px;border-radius:50%}
+.cta-term-dots span:nth-child(1){background:#ff5f57}
+.cta-term-dots span:nth-child(2){background:#febc2e}
+.cta-term-dots span:nth-child(3){background:#28c840}
+.cta-body{padding:1.5rem}
+.cta-body .prompt-line{font-size:.78rem;color:var(--text3);margin-bottom:1rem}
+.cta-body .prompt-line .cmd-text{color:var(--green)}
+input,select{padding:.65rem .9rem;border-radius:3px;border:1px solid var(--border);background:var(--bg3);color:var(--green);font-family:var(--mono);font-size:.82rem;outline:none;transition:border .2s;width:100%}
+input:focus,select:focus{border-color:var(--green);box-shadow:0 0 8px rgba(0,255,136,.1)}
+input::placeholder{color:var(--text3)}
+select{color:var(--text2)}
+select option{background:var(--bg);color:var(--text)}
 
-.cta-sec{background:linear-gradient(160deg,rgba(62,169,155,.06),rgba(139,124,200,.04));border-top:1px solid rgba(62,169,155,.08);border-bottom:1px solid rgba(62,169,155,.08)}
-input,select{padding:.85rem 1.2rem;border-radius:8px;border:1px solid var(--gray3);background:var(--card);color:var(--white);font-family:var(--font);font-size:.9rem;outline:none;transition:border .25s;width:100%}
-input:focus,select:focus{border-color:var(--teal)}
-input::placeholder{color:var(--gray)}
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem 1rem;font-size:.72rem}
+.ft-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.ft-brand{color:var(--green);font-weight:700;font-size:.85rem}
+.ft-links{display:flex;gap:1.5rem}
+.ft-links a{color:var(--text3);font-size:.72rem}
+.ft-links a:hover{color:var(--green)}
+.ft-copy{color:var(--text3);font-size:.65rem;text-align:center;margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--border);max-width:960px;margin-left:auto;margin-right:auto}
+.ft-legal{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:960px;margin:.6rem auto 0}
+.ft-legal a{color:var(--text3);font-size:.65rem;transition:color .2s}
+.ft-legal a:hover{color:var(--green)}
 
-footer{background:var(--bg);border-top:1px solid var(--gray3);padding:2.5rem 2.5rem 1.5rem}
-.ft-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
-.ft-brand{display:flex;align-items:center;gap:.6rem}
-.ft-brand img{height:36px;width:36px;object-fit:contain;border-radius:3px}
-.ft-links{display:flex;gap:2rem}
-.ft-links a{color:#ffffff;font-size:.82rem}
-.ft-links a:hover{color:var(--teal)}
-.ft-copy{color:#ffffff;font-size:.75rem;text-align:center;margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid rgba(61,74,92,.15);max-width:1180px;margin-left:auto;margin-right:auto}
-
-.fi{opacity:0;transform:translateY(24px);transition:all .55s ease-out}
+/* FADE IN */
+.fi{opacity:0;transform:translateY(16px);transition:all .45s ease-out}
 .fi.vis{opacity:1;transform:translateY(0)}
-.s1{transition-delay:.08s}.s2{transition-delay:.16s}.s3{transition-delay:.24s}
+.s1{transition-delay:.06s}.s2{transition-delay:.12s}.s3{transition-delay:.18s}
 
+/* ASCII SEPARATOR */
+.ascii-sep{text-align:center;color:var(--text3);font-size:.65rem;padding:1rem 0;opacity:.4}
+
+/* RESPONSIVE */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;text-align:center}
-  .hero h1{font-size:2.4rem}
-  .hero .sub{margin:0 auto 2rem}
-  .hero-ctas{justify-content:center}
-  .hero-stats{justify-content:center}
-  .hero-visual{display:none}
-  .pgrid,.pr-grid,.part-grid{grid-template-columns:1fr}
-  .sec-grid{grid-template-columns:repeat(2,1fr)}
+  .mod-grid,.pr-plans{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:repeat(2,1fr)}
+  .ch-matrix{grid-template-columns:repeat(3,1fr)}
   .nav-links{display:none}
   .mobile-menu-btn{display:block}
-  .stitle{font-size:1.9rem}
-}
-
-/* Tablet landscape y móviles grandes */
-@media(max-width:768px) and (min-width:601px){
-  nav{padding:1rem 2rem}
-  section{padding:4rem 2rem}
-  .hero{padding:6rem 2rem 4rem}
-  .hero h1{font-size:2.2rem}
-  .btn{min-height:44px}
-  input,select{font-size:16px}
+  .hero-below{flex-direction:column;align-items:flex-start;gap:1.5rem}
+  .hero-ctas{margin-left:0}
+  .sec-title{font-size:1.2rem}
 }
 
 @media(max-width:600px){
-  /* Navegación móvil */
   .mobile-menu-btn{display:block}
-  nav{padding:1rem 1.5rem}
-  .nav-brand{font-size:1rem}
-
-  /* Espaciado general */
-  section{padding:3rem 1.5rem}
-  .hero{padding:5rem 1.5rem 3rem;min-height:auto}
-
-  /* Tipografía */
-  .hero h1{font-size:1.75rem;line-height:1.2}
-  .hero .sub{font-size:1rem}
-  .stitle{font-size:1.5rem}
-  .sdesc{font-size:.9rem}
-
-  /* Grids */
-  .sec-grid{grid-template-columns:1fr}
-  .ch-strip{gap:.8rem;flex-direction:column}
-  .ch-item{min-width:auto;width:100%;padding:1rem}
-
-  /* Hero stats */
-  .hero-stats{gap:1.5rem;flex-wrap:wrap;justify-content:space-around}
-  .hero-stats>div{flex:1;min-width:90px;text-align:center}
-
-  /* Cards */
-  .pcard,.pr-card,.part-card{padding:1.5rem 1.2rem}
-
-  /* Buttons - Touch friendly (44px min) */
-  .btn{padding:1rem 1.5rem;font-size:.9rem;min-height:44px}
-  .hero-ctas{flex-direction:column;width:100%}
-  .hero-ctas .btn{width:100%;justify-content:center}
-
-  /* Forms */
+  nav{padding:.7rem 1.2rem}
+  section{padding:3rem 1.2rem}
+  .hero{padding:5rem 1.2rem 3rem;min-height:auto}
+  .term-body{padding:1rem .8rem;font-size:.78rem}
+  .ch-matrix{grid-template-columns:repeat(2,1fr)}
+  .proc-grid{grid-template-columns:1fr}
+  .hero-stat .v{font-size:1.3rem}
+  .btn{padding:.6rem 1rem;font-size:.78rem;min-height:44px}
   input,select{font-size:16px}
   button[type="submit"]{min-height:48px}
-
-  /* Footer */
-  .ft-links{flex-direction:column;gap:1rem;text-align:center}
+  .ft-links{flex-direction:column;gap:.6rem;text-align:center}
   .ft-inner{flex-direction:column;text-align:center}
-  footer{padding:2rem 1.5rem 1rem}
-
-  /* Tablas */
-  .table-wrapper{border-radius:8px;box-shadow:inset 0 0 0 1px var(--gray3)}
-  .tiers-tbl th,.tiers-tbl td{padding:.5rem .7rem;font-size:.75rem}
-  .cmp-tbl th,.cmp-tbl td{padding:.5rem .7rem;font-size:.75rem}
+  footer{padding:1.5rem 1.2rem .8rem}
+  .table-wrapper{border-radius:4px}
+  .tiers-tbl th,.tiers-tbl td,.cmp-tbl th,.cmp-tbl td{padding:.4rem .5rem;font-size:.68rem}
+  .sec-title{font-size:1.1rem}
+  .pr-price{font-size:1.6rem}
 }
 </style>
 
-<!-- Schema.org Structured Data -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -286,53 +295,13 @@ footer{background:var(--bg);border-top:1px solid var(--gray3);padding:2.5rem 2.5
     "@type": "AggregateOffer",
     "priceCurrency": "EUR",
     "lowPrice": "49",
-    "highPrice": "99",
-    "priceSpecification": {
-      "@type": "UnitPriceSpecification",
-      "price": "99",
-      "priceCurrency": "EUR",
-      "billingDuration": "P1M"
-    }
+    "highPrice": "99"
   },
-  "description": "Plataforma de análisis de comunicaciones con IA. Transcripción automática, análisis de sentimiento y hub unificado para llamadas, email, WhatsApp, Telegram y Meta.",
+  "description": "Plataforma de análisis de comunicaciones con IA. 5 canales, transcripción automática, análisis de sentimiento. Comunicaciones ilimitadas.",
   "provider": {
     "@type": "Organization",
     "name": "FENIX IA SOLUTIONS",
-    "url": "https://www.fenixia360.com",
-    "logo": "https://www.fenixia360.com/logo.png",
-    "sameAs": [
-      "https://www.fenixia.tech",
-      "https://www.fenixia360.com"
-    ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127"
-  },
-  "featureList": [
-    "Transcripción automática de llamadas",
-    "Análisis de sentimiento multicanal",
-    "Hub unificado 5 canales",
-    "Detección de oportunidades con IA",
-    "Dashboard de calidad de atención",
-    "Integración con CRMs"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "FENIX IA SOLUTIONS",
-  "url": "https://www.fenixia360.com",
-  "logo": "https://www.fenixia360.com/logo.png",
-  "description": "Plataforma de analytics de comunicaciones con IA para PYMEs",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Sales",
-    "availableLanguage": ["Spanish"]
+    "url": "https://web3.fenixia360.com"
   }
 }
 </script>
@@ -342,168 +311,246 @@ footer{background:var(--bg);border-top:1px solid var(--gray3);padding:2.5rem 2.5
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-logo">
-    <span class="nav-brand">FENIX <em>IA</em></span>
+    <span class="nav-brand">FENIX_IA</span>
+    <span class="nav-prompt">~/dashboard</span>
   </div>
   <div class="nav-links">
-    <a href="#productos">Productos</a>
-    <a href="#pricing">Precios</a>
-    <a href="#sectores">Sectores</a>
-    <a href="#partners">Partners</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#contacto" class="btn btn-primary">Solicitar Demo</a>
+    <a href="#modules">modules</a>
+    <a href="#channels">channels</a>
+    <a href="#pricing">config</a>
+    <a href="#sectors">processes</a>
+    <a href="#contacto" class="btn btn-primary">$ init demo</a>
   </div>
-  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menú">☰</button>
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Men&uacute;">[menu]</button>
 </nav>
 
 <div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
 <div class="mobile-menu">
-  <a href="#productos" onclick="toggleMobileMenu()">Productos</a>
-  <a href="#pricing" onclick="toggleMobileMenu()">Precios</a>
-  <a href="#sectores" onclick="toggleMobileMenu()">Sectores</a>
-  <a href="#partners" onclick="toggleMobileMenu()">Partners</a>
-  <a href="#contacto" onclick="toggleMobileMenu()">Contacto</a>
-  <a href="#contacto" class="btn btn-primary" onclick="toggleMobileMenu()">Solicitar Demo</a>
+  <a href="#modules" onclick="toggleMobileMenu()">modules</a>
+  <a href="#channels" onclick="toggleMobileMenu()">channels</a>
+  <a href="#pricing" onclick="toggleMobileMenu()">config</a>
+  <a href="#sectors" onclick="toggleMobileMenu()">processes</a>
+  <a href="#contacto" onclick="toggleMobileMenu()">contacto</a>
+  <a href="#contacto" class="btn btn-primary" onclick="toggleMobileMenu()">$ init demo</a>
 </div>
 
-<!-- HERO -->
+<!-- HERO TERMINAL -->
 <section class="hero">
   <div class="hero-inner">
-    <div>
-      <h1>Hacemos <span class="hl">visible</span> lo que tus comunicaciones <span class="hl">esconden</span></h1>
-      <p class="sub">Analiza con IA todas tus comunicaciones (llamadas, emails, WhatsApp, Telegram y Meta) y central&iacute;zalas en un solo hub</p>
-      <div class="hero-ctas">
-        <a href="#contacto" class="btn btn-primary">Solicitar Demo Gratuita &rarr;</a>
-        <a href="#productos" class="btn btn-outline">Ver Productos</a>
+    <div class="terminal">
+      <div class="term-bar">
+        <div class="term-dots"><span></span><span></span><span></span></div>
+        <span class="term-title">fenix@ia:~/communications</span>
       </div>
-      <div class="hero-stats">
-        <div><div class="stat-val">99&euro;</div><div class="stat-lbl">desde / mes</div></div>
-        <div><div class="stat-val">&infin;</div><div class="stat-lbl">Comunicaciones</div></div>
-        <div><div class="stat-val">5</div><div class="stat-lbl">Canales</div></div>
+      <div class="term-body" id="hero-terminal">
+        <div class="term-line"><span class="prompt">$ </span><span class="cmd">fenix</span> <span class="flag">--analyze</span> <span class="flag">--channels</span>=<span class="val">all</span></div>
+        <div class="term-line output dim">&nbsp;</div>
+        <div class="term-line output info">&#9608; FENIX IA v3.6.0 &mdash; Communication Intelligence Engine</div>
+        <div class="term-line output dim">&nbsp;</div>
+        <div class="term-line output">Escaneando comunicaciones empresariales...</div>
+        <div class="term-line output success">&#10003; 347 comunicaciones analizadas hoy</div>
+        <div class="term-line output success">&#10003; 5 canales conectados (calls, email, wa, tg, meta)</div>
+        <div class="term-line output success">&#10003; Sentimiento positivo: +78%</div>
+        <div class="term-line output warn">&#9888; 12 oportunidades comerciales detectadas</div>
+        <div class="term-line output error">&#10007; 3 llamadas sin devolver (prioridad alta)</div>
+        <div class="term-line output dim">&nbsp;</div>
+        <div class="term-line output">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
+        <div class="term-line output"><span class="highlight">RESULTADO: Tu equipo pierde ~23% de oportunidades</span></div>
+        <div class="term-line output"><span class="highlight">por falta de visibilidad en comunicaciones.</span></div>
+        <div class="term-line output">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
+        <div class="term-line output dim">&nbsp;</div>
+        <div class="term-line"><span class="prompt">$ </span><span class="cmd">fenix</span> <span class="flag">--fix</span> <span class="flag">--price</span>=<span class="val">99eur/mes</span> <span class="flag">--unlimited</span><span class="cursor"></span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-glow"></div>
-      <div class="dash">
-        <div class="dash-bar">
-          <div class="dash-dots"><i></i><i></i><i></i></div>
-          <span>FENIX Pulse &mdash; Dashboard</span>
-        </div>
-        <div class="dash-body">
-          <div class="d-row"><span class="d-lbl">Comunicaciones hoy</span><span class="d-val tl">347</span></div>
-          <div class="d-row"><span class="d-lbl">Sentimiento positivo</span><span class="d-val up">+78%</span></div>
-          <div class="d-row"><span class="d-lbl">Oportunidades detectadas</span><span class="d-val tl">12</span></div>
-          <div class="d-row"><span class="d-lbl">Llamadas sin devolver</span><span class="d-val dn">3</span></div>
-          <div class="d-channels">
-            <div class="d-ch"><span class="ico">&#128222;</span>Llamadas</div>
-            <div class="d-ch"><span class="ico">&#9993;</span>Email</div>
-            <div class="d-ch"><span class="ico">&#128172;</span>WhatsApp</div>
-            <div class="d-ch"><span class="ico">&#9992;</span>Telegram</div>
-            <div class="d-ch"><span class="ico">&#127760;</span>Meta</div>
+    <div class="hero-below">
+      <div class="hero-stat"><div class="v">99&euro;</div><div class="l">desde / mes</div></div>
+      <div class="hero-stat"><div class="v">&infin;</div><div class="l">comunicaciones</div></div>
+      <div class="hero-stat"><div class="v">5</div><div class="l">canales</div></div>
+      <div class="hero-stat"><div class="v">&lt;24h</div><div class="l">activaci&oacute;n</div></div>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn btn-primary">$ fenix init &rarr;</a>
+        <a href="#modules" class="btn btn-outline">ver m&oacute;dulos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
+
+<!-- MODULES / PRODUCTS -->
+<section id="modules">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-comment">M&oacute;dulos disponibles en el ecosistema FENIX</div>
+      <h2 class="sec-title">$ fenix modules --list</h2>
+      <p class="sec-desc">Tres m&oacute;dulos. Instala el que necesites o despliega el bundle completo</p>
+    </div>
+    <div class="mod-grid">
+      <div class="mod-card fi">
+        <div class="mod-name">@fenix/pulse</div>
+        <div class="mod-ver">v3.6.0 &bull; Analytics Engine</div>
+        <p class="mod-desc">Motor de analytics con IA. Transcribe, analiza sentimiento, detecta oportunidades y genera res&uacute;menes accionables</p>
+        <ul class="mod-feats">
+          <li>Transcripci&oacute;n autom&aacute;tica de llamadas</li>
+          <li>An&aacute;lisis de sentimiento multicanal</li>
+          <li>Detecci&oacute;n de keywords y oportunidades</li>
+          <li>Dashboard de calidad de atenci&oacute;n</li>
+          <li>Alertas de churn y leads fr&iacute;os</li>
+          <li>Res&uacute;menes accionables con IA</li>
+        </ul>
+        <div class="mod-install"><span class="cmd-prefix">$ </span>fenix install @fenix/pulse</div>
+      </div>
+      <div class="mod-card fi s1">
+        <div class="mod-name">@fenix/connect</div>
+        <div class="mod-ver">v3.6.0 &bull; Unified Hub</div>
+        <p class="mod-desc">Hub de comunicaciones unificado. 5 canales en una sola bandeja. Asignaci&oacute;n autom&aacute;tica, historial completo</p>
+        <ul class="mod-feats">
+          <li>Bandeja unificada 5 canales</li>
+          <li>Asignaci&oacute;n autom&aacute;tica por reglas</li>
+          <li>Historial completo por cliente</li>
+          <li>Integraci&oacute;n con CRMs</li>
+          <li>Plantillas y respuestas r&aacute;pidas</li>
+          <li>M&eacute;tricas de tiempo de respuesta</li>
+        </ul>
+        <div class="mod-install"><span class="cmd-prefix">$ </span>fenix install @fenix/connect</div>
+      </div>
+      <div class="mod-card fi s2">
+        <div class="mod-name">@fenix/360</div>
+        <div class="mod-ver">v3.6.0 &bull; Full Bundle</div>
+        <p class="mod-desc">Pulse + Connect en un solo paquete. Visi&oacute;n 360&deg; real del cliente. M&aacute;ximo poder, m&aacute;ximo ahorro</p>
+        <ul class="mod-feats">
+          <li>Todo de @fenix/pulse</li>
+          <li>Todo de @fenix/connect</li>
+          <li>Comunicaciones ilimitadas</li>
+          <li>Onboarding personalizado</li>
+          <li>Soporte prioritario</li>
+          <li>20% ahorro vs separados</li>
+        </ul>
+        <div class="mod-install"><span class="cmd-prefix">$ </span>fenix install @fenix/360</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
+
+<!-- CHANNELS AS CONNECTED NODES -->
+<section id="channels" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="sec-header" style="text-align:center">
+      <div class="sec-comment">Canales activos en el sistema</div>
+      <h2 class="sec-title">$ fenix status --channels</h2>
+      <p class="sec-desc" style="margin:0 auto">5 canales conectados. 0 puntos ciegos. Monitoreo en tiempo real</p>
+    </div>
+    <div class="ch-matrix">
+      <div class="ch-node fi"><div class="ico">&#128222;</div><div class="name">Llamadas</div><div class="status">ONLINE</div></div>
+      <div class="ch-node fi s1"><div class="ico">&#9993;&#65039;</div><div class="name">Email</div><div class="status">ONLINE</div></div>
+      <div class="ch-node fi s2"><div class="ico">&#128172;</div><div class="name">WhatsApp</div><div class="status">ONLINE</div></div>
+      <div class="ch-node fi s3"><div class="ico">&#9992;&#65039;</div><div class="name">Telegram</div><div class="status">ONLINE</div></div>
+      <div class="ch-node fi"><div class="ico">&#127760;</div><div class="name">Meta</div><div class="status">ONLINE</div></div>
+    </div>
+
+    <!-- Code sample -->
+    <div class="code-block" style="margin-top:2.5rem">
+      <div class="code-head"><span class="code-lang">fenix.config.json</span><span>output</span></div>
+      <div class="code-body">
+        <div><span class="ln">1</span><span class="key">{</span></div>
+        <div><span class="ln">2</span>&nbsp;&nbsp;<span class="key">"channels"</span>: [<span class="str">"calls"</span>, <span class="str">"email"</span>, <span class="str">"whatsapp"</span>, <span class="str">"telegram"</span>, <span class="str">"meta"</span>],</div>
+        <div><span class="ln">3</span>&nbsp;&nbsp;<span class="key">"ai_engine"</span>: <span class="str">"fenix-pulse-v3"</span>,</div>
+        <div><span class="ln">4</span>&nbsp;&nbsp;<span class="key">"transcription"</span>: <span class="bool">true</span>,</div>
+        <div><span class="ln">5</span>&nbsp;&nbsp;<span class="key">"sentiment_analysis"</span>: <span class="bool">true</span>,</div>
+        <div><span class="ln">6</span>&nbsp;&nbsp;<span class="key">"opportunity_detection"</span>: <span class="bool">true</span>,</div>
+        <div><span class="ln">7</span>&nbsp;&nbsp;<span class="key">"unlimited_comms"</span>: <span class="bool">true</span>,</div>
+        <div><span class="ln">8</span>&nbsp;&nbsp;<span class="key">"price_per_month"</span>: <span class="num">99</span></div>
+        <div><span class="ln">9</span><span class="key">}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING AS CONFIG -->
+<section id="pricing">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-comment">Configuraci&oacute;n de precios y planes</div>
+      <h2 class="sec-title">$ fenix config --pricing</h2>
+      <p class="sec-desc">Comunicaciones ilimitadas. Sin costes ocultos. Onboarding incluido</p>
+    </div>
+    <div class="pr-config">
+      <div class="pr-config-head"><span>pricing.yml</span><span>3 plans</span></div>
+      <div class="pr-config-body">
+        <div class="pr-plans">
+          <div class="pr-plan fi">
+            <div class="pr-label t1">@fenix/pulse</div>
+            <div class="pr-price">&euro;79<span>/mes</span></div>
+            <div class="pr-meta">1 user &bull; unlimited comms</div>
+            <ul class="pr-list">
+              <li>Analytics IA multicanal</li>
+              <li>Transcripci&oacute;n autom&aacute;tica</li>
+              <li>Sentimiento + keywords</li>
+              <li>Dashboard de calidad</li>
+              <li>Alertas y res&uacute;menes IA</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;font-size:.75rem">$ init --plan=pulse</a>
+          </div>
+          <div class="pr-plan featured fi s1">
+            <div class="pr-label t3">@fenix/360</div>
+            <div class="pr-price">&euro;99<span>/mes</span></div>
+            <div class="pr-meta">1 user &bull; unlimited comms &bull; full bundle</div>
+            <ul class="pr-list">
+              <li>Todo de Pulse + Connect</li>
+              <li>Hub unificado 5 canales</li>
+              <li>Onboarding personalizado</li>
+              <li>Soporte prioritario</li>
+              <li>20% ahorro vs separados</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary" style="width:100%;justify-content:center;font-size:.75rem">$ init --plan=360</a>
+          </div>
+          <div class="pr-plan fi s2">
+            <div class="pr-label t2">@fenix/connect</div>
+            <div class="pr-price">&euro;49<span>/mes</span></div>
+            <div class="pr-meta">1 user &bull; unlimited comms</div>
+            <ul class="pr-list">
+              <li>Hub unificado 5 canales</li>
+              <li>Asignaci&oacute;n autom&aacute;tica</li>
+              <li>Historial por cliente</li>
+              <li>Integraci&oacute;n CRM</li>
+              <li>M&eacute;tricas respuesta</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;font-size:.75rem">$ init --plan=connect</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="productos">
-  <div class="container">
-    <span class="tag">Productos</span>
-    <h2 class="stitle">Tres productos. Un ecosistema</h2>
-    <p class="sdesc">Elige el que encaja con tu empresa o comb&iacute;nalos con FENIX 360 para la experiencia completa</p>
-    <div class="pgrid">
-      <div class="pcard fi">
-        <div class="pname">FENIX <span class="a1">PULSE</span></div>
-        <div class="ptype">Analytics multicanal con IA</div>
-        <p class="pdesc">Toma el pulso a TODAS las comunicaciones de tu empresa. Transcribe, analiza, detecta oportunidades y mide calidad autom&aacute;ticamente</p>
-        <ul class="pfeats"><li>Transcripci&oacute;n autom&aacute;tica de llamadas</li><li>An&aacute;lisis de sentimiento multicanal</li><li>Detecci&oacute;n de keywords y oportunidades</li><li>Dashboard de calidad de atenci&oacute;n</li><li>Alertas de churn y leads fr&iacute;os</li><li>Res&uacute;menes accionables con IA</li></ul>
-      </div>
-      <div class="pcard fi s1">
-        <div class="pname">FENIX <span class="a2">CONNECT</span></div>
-        <div class="ptype">Hub de comunicaciones unificado</div>
-        <p class="pdesc">Centraliza llamadas, email, WhatsApp, Telegram y Meta en un solo punto. Ning&uacute;n mensaje se pierde jam&aacute;s</p>
-        <ul class="pfeats"><li>Bandeja unificada 5 canales</li><li>Asignaci&oacute;n autom&aacute;tica por reglas</li><li>Historial completo por cliente</li><li>Integraci&oacute;n con CRMs</li><li>Plantillas y respuestas r&aacute;pidas</li><li>M&eacute;tricas de tiempo de respuesta</li></ul>
-      </div>
-      <div class="pcard fi s2">
-        <div class="pname">FENIX <span class="a3">360</span></div>
-        <div class="ptype">Bundle completo &bull; Pulse + Connect</div>
-        <p class="pdesc">Visi&oacute;n 360&deg; real del cliente. Analiza y gestiona todas tus comunicaciones desde un solo punto. El producto flagship</p>
-        <ul class="pfeats"><li>Todo de FENIX Pulse</li><li>Todo de FENIX Connect</li><li>Comunicaciones ilimitadas</li><li>Onboarding personalizado</li><li>Soporte prioritario</li><li>Ahorro del 20% vs separados</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CHANNELS -->
-<section style="background:var(--bg2);padding:4.5rem 2.5rem">
-  <div class="container center">
-    <span class="tag">Canales</span>
-    <h2 class="stitle">5 canales. 1 plataforma. 0 puntos ciegos</h2>
-    <div class="ch-strip">
-      <div class="ch-item"><div class="ci">&#128222;</div><div class="cn">Llamadas</div><div class="cd">Transcripci&oacute;n + IA</div></div>
-      <div class="ch-item"><div class="ci">&#9993;&#65039;</div><div class="cn">Email</div><div class="cd">Hilos completos</div></div>
-      <div class="ch-item"><div class="ci">&#128172;</div><div class="cn">WhatsApp</div><div class="cd">Business API</div></div>
-      <div class="ch-item"><div class="ci">&#9992;&#65039;</div><div class="cn">Telegram</div><div class="cd">Bots + canales</div></div>
-      <div class="ch-item"><div class="ci">&#127760;</div><div class="cn">Meta</div><div class="cd">Messenger + IG</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-  <div class="container">
-    <span class="tag">Precios</span>
-    <h2 class="stitle">Transparentes. Sin sorpresas</h2>
-    <p class="sdesc">Comunicaciones ilimitadas en todos los planes. Onboarding incluido</p>
-    <div class="pr-grid">
-      <div class="pr-card fi">
-        <div class="pr-name t1">FENIX PULSE</div>
-        <div class="pr-amt"><span class="cur">&euro;</span><span class="num">79</span><span class="per">/mes</span></div>
-        <div class="pr-users">1 usuario &bull; Ilimitadas</div>
-        <ul class="pr-feats"><li>Analytics IA multicanal</li><li>Transcripci&oacute;n llamadas</li><li>Sentimiento + keywords</li><li>Dashboard de calidad</li><li>Alertas y res&uacute;menes</li></ul>
-        <a href="#contacto" class="btn btn-primary" style="width:100%;justify-content:center">Solicitar Demo &rarr;</a>
-      </div>
-      <div class="pr-card feat fi s1">
-        <div class="pr-name t3">FENIX 360</div>
-        <div class="pr-amt"><span class="cur">&euro;</span><span class="num">99</span><span class="per">/mes</span></div>
-        <div class="pr-users">1 usuario &bull; Ilimitadas</div>
-        <ul class="pr-feats"><li>Todo de Pulse + Connect</li><li>Hub unificado 5 canales</li><li>Onboarding personalizado</li><li>Soporte prioritario</li><li>20% ahorro vs separados</li></ul>
-        <a href="#contacto" class="btn btn-primary" style="width:100%;justify-content:center">Solicitar Demo &rarr;</a>
-      </div>
-      <div class="pr-card fi s2">
-        <div class="pr-name t2">FENIX CONNECT</div>
-        <div class="pr-amt"><span class="cur">&euro;</span><span class="num">49</span><span class="per">/mes</span></div>
-        <div class="pr-users">1 usuario &bull; Ilimitadas</div>
-        <ul class="pr-feats"><li>Hub unificado 5 canales</li><li>Asignaci&oacute;n autom&aacute;tica</li><li>Historial por cliente</li><li>Integraci&oacute;n CRM</li><li>M&eacute;tricas respuesta</li></ul>
-        <a href="#contacto" class="btn btn-primary" style="width:100%;justify-content:center">Solicitar Demo &rarr;</a>
-      </div>
-    </div>
-    <div style="margin-top:3.5rem">
-      <h3 style="color:var(--white);font-size:1.2rem;font-weight:700">Todos los tramos de FENIX</h3>
+    <div class="tbl-section">
+      <h3>Todos los tramos</h3>
       <div class="table-wrapper">
-        <table class="tiers-tbl"><thead><tr><th>Usuarios</th><th>Pulse</th><th>Connect</th><th>360 Bundle</th><th>Onboard. Pulse</th><th>Onboard. Connect</th><th>Onboard. 360</th><th>Comunicaciones</th></tr></thead>
+        <table class="tiers-tbl"><thead><tr><th>users</th><th>pulse</th><th>connect</th><th>360</th><th>onb. pulse</th><th>onb. connect</th><th>onb. 360</th><th>comms</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td>79&euro;</td><td>49&euro;</td><td class="hl">99&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>Ilimitadas</td></tr>
-          <tr><td>2</td><td>119&euro;</td><td>79&euro;</td><td class="hl">159&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>Ilimitadas</td></tr>
-          <tr><td>3-5</td><td>149&euro;</td><td>99&euro;</td><td class="hl">199&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>Ilimitadas</td></tr>
-          <tr><td>6-10</td><td>229&euro;</td><td>149&euro;</td><td class="hl">299&euro;/mes</td><td>399&euro;</td><td>249&euro;</td><td>549&euro;</td><td>Ilimitadas</td></tr>
-          <tr><td>10+</td><td colspan="7" style="text-align:center;color:var(--gray)">Contacta para precio personalizado</td></tr>
+          <tr><td>1</td><td>79&euro;</td><td>49&euro;</td><td class="hl">99&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
+          <tr><td>2</td><td>119&euro;</td><td>79&euro;</td><td class="hl">159&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
+          <tr><td>3-5</td><td>149&euro;</td><td>99&euro;</td><td class="hl">199&euro;/mes</td><td>299&euro;</td><td>199&euro;</td><td>499&euro;</td><td>&infin;</td></tr>
+          <tr><td>6-10</td><td>229&euro;</td><td>149&euro;</td><td class="hl">299&euro;/mes</td><td>399&euro;</td><td>249&euro;</td><td>549&euro;</td><td>&infin;</td></tr>
+          <tr><td>10+</td><td colspan="7" style="text-align:center;color:var(--text3)">$ fenix contact --custom-pricing</td></tr>
         </tbody></table>
       </div>
-      <p style="color:var(--gray);font-size:.78rem;margin-top:.8rem">* 20% descuento por compromiso anual. Onboarding incluido</p>
+      <p style="color:var(--text3);font-size:.68rem;margin-top:.5rem"># 20% descuento con --annual flag. Onboarding es one-time, no recurrente</p>
     </div>
   </div>
 </section>
 
-<!-- COMPARE -->
-<section>
-  <div class="container center">
-    <span class="tag">Comparativa</span>
-    <h2 class="stitle">&iquest;Por qu&eacute; FENIX IA?</h2>
-    <p class="sdesc" style="margin:0 auto 1.5rem">2,6x-9x m&aacute;s barato y el &uacute;nico que cubre todos los canales</p>
+<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
+
+<!-- COMPARISON -->
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container" style="text-align:center">
+    <div class="sec-header" style="text-align:center">
+      <div class="sec-comment">Benchmark vs competidores</div>
+      <h2 class="sec-title">$ fenix benchmark --compare</h2>
+      <p class="sec-desc" style="margin:0 auto">2.6x-9x m&aacute;s barato. El &uacute;nico con 5 canales</p>
+    </div>
     <div class="table-wrapper">
-      <table class="cmp-tbl"><thead><tr><th>Plataforma</th><th>&euro;/user</th><th>Llamadas</th><th>Email</th><th>WhatsApp</th><th>Telegram</th><th>Meta</th></tr></thead>
+      <table class="cmp-tbl"><thead><tr><th>platform</th><th>&euro;/user</th><th>calls</th><th>email</th><th>wa</th><th>tg</th><th>meta</th></tr></thead>
       <tbody>
         <tr><td>Gong</td><td>~275&euro;</td><td class="v">&#10003;</td><td class="v">&#10003;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td></tr>
         <tr><td>Ringover</td><td>~83&euro;</td><td class="v">&#10003;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td><td class="x">&#10007;</td></tr>
@@ -515,56 +562,63 @@ footer{background:var(--bg);border-top:1px solid var(--gray3);padding:2.5rem 2.5
   </div>
 </section>
 
-<!-- SECTORS -->
-<section id="sectores" style="background:var(--bg2)">
+<!-- SECTORS AS PROCESSES -->
+<section id="sectors">
   <div class="container">
-    <span class="tag">Sectores</span>
-    <h2 class="stitle">Dise&ntilde;ado para PYMEs que comunican</h2>
-    <p class="sdesc">Si tu equipo usa llamadas, email y WhatsApp, FENIX IA te da visibilidad total</p>
-    <div class="sec-grid">
-      <div class="sec-card fi"><div class="sec-icon">&#127973;</div><div class="sec-name">Cl&iacute;nicas</div><div class="sec-desc">Citas perdidas, seguimiento de pacientes, calidad de atenci&oacute;n</div></div>
-      <div class="sec-card fi s1"><div class="sec-icon">&#127968;</div><div class="sec-name">Inmobiliarias</div><div class="sec-desc">Leads por WA y portales. Cada lead sin atender es comisi&oacute;n perdida</div></div>
-      <div class="sec-card fi s2"><div class="sec-icon">&#128722;</div><div class="sec-name">E-commerce</div><div class="sec-desc">Postventa, devoluciones, experiencia cliente multicanal</div></div>
-      <div class="sec-card fi s3"><div class="sec-icon">&#128188;</div><div class="sec-name">Asesor&iacute;as</div><div class="sec-desc">Comunicaci&oacute;n cr&iacute;tica con clientes. Contexto sin fisuras</div></div>
-      <div class="sec-card fi"><div class="sec-icon">&#128663;</div><div class="sec-name">Talleres</div><div class="sec-desc">Citas por WA, seguimiento postventa, reclamaciones</div></div>
-      <div class="sec-card fi s1"><div class="sec-icon">&#127891;</div><div class="sec-name">Academias</div><div class="sec-desc">Consultas, matr&iacute;culas, comunicaci&oacute;n multicanal</div></div>
-      <div class="sec-card fi s2"><div class="sec-icon">&#128737;</div><div class="sec-name">Seguros</div><div class="sec-desc">Siniestros, renovaciones, nuevas p&oacute;lizas</div></div>
-      <div class="sec-card fi s3"><div class="sec-icon">&#127960;</div><div class="sec-name">Hoteler&iacute;a</div><div class="sec-desc">Reservas, reclamaciones, experiencia del hu&eacute;sped</div></div>
+    <div class="sec-header">
+      <div class="sec-comment">Procesos activos por sector</div>
+      <h2 class="sec-title">$ fenix ps --sectors</h2>
+      <p class="sec-desc">Cada sector tiene sus procesos optimizados de comunicaci&oacute;n</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-card fi"><div class="proc-icon">&#127973;</div><div class="proc-name">Cl&iacute;nicas</div><div class="proc-desc">Citas perdidas, seguimiento de pacientes, calidad de atenci&oacute;n</div><div class="proc-pid">PID 2847 &bull; RUNNING</div></div>
+      <div class="proc-card fi s1"><div class="proc-icon">&#127968;</div><div class="proc-name">Inmobiliarias</div><div class="proc-desc">Leads por WA y portales. Cada lead sin atender es comisi&oacute;n perdida</div><div class="proc-pid">PID 2848 &bull; RUNNING</div></div>
+      <div class="proc-card fi s2"><div class="proc-icon">&#128722;</div><div class="proc-name">E-commerce</div><div class="proc-desc">Postventa, devoluciones, experiencia cliente multicanal</div><div class="proc-pid">PID 2849 &bull; RUNNING</div></div>
+      <div class="proc-card fi s3"><div class="proc-icon">&#128188;</div><div class="proc-name">Asesor&iacute;as</div><div class="proc-desc">Comunicaci&oacute;n cr&iacute;tica con clientes. Contexto sin fisuras</div><div class="proc-pid">PID 2850 &bull; RUNNING</div></div>
+      <div class="proc-card fi"><div class="proc-icon">&#128663;</div><div class="proc-name">Talleres</div><div class="proc-desc">Citas por WA, seguimiento postventa, reclamaciones</div><div class="proc-pid">PID 2851 &bull; RUNNING</div></div>
+      <div class="proc-card fi s1"><div class="proc-icon">&#127891;</div><div class="proc-name">Academias</div><div class="proc-desc">Consultas, matr&iacute;culas, comunicaci&oacute;n multicanal</div><div class="proc-pid">PID 2852 &bull; RUNNING</div></div>
+      <div class="proc-card fi s2"><div class="proc-icon">&#128737;</div><div class="proc-name">Seguros</div><div class="proc-desc">Siniestros, renovaciones, nuevas p&oacute;lizas</div><div class="proc-pid">PID 2853 &bull; RUNNING</div></div>
+      <div class="proc-card fi s3"><div class="proc-icon">&#127960;</div><div class="proc-name">Hoteler&iacute;a</div><div class="proc-desc">Reservas, reclamaciones, experiencia del hu&eacute;sped</div><div class="proc-pid">PID 2854 &bull; RUNNING</div></div>
     </div>
   </div>
 </section>
 
-<!-- PARTNERS -->
-<section id="partners">
-  <div class="container">
-    <span class="tag">Partners</span>
-    <h2 class="stitle">Crece con nosotros</h2>
-    <p class="sdesc">Programa de partners para consultoras, integradores y agencias</p>
-    <div class="part-grid">
-      <div class="part-card fi"><div class="part-ico">&#129309;</div><div class="part-name">Referral Partner</div><div class="part-lbl" style="color:var(--teal)">Comisi&oacute;n recurrente</div><p class="part-desc">Refiere clientes. Nosotros vendemos y gestionamos. T&uacute; cobras mientras el cliente siga activo</p></div>
-      <div class="part-card fi s1"><div class="part-ico">&#128200;</div><div class="part-name">Reseller Partner</div><div class="part-lbl" style="color:var(--green)">Descuento sobre PVP</div><p class="part-desc">Vende FENIX bajo tu marca. Factura al cliente. M&iacute;nimo 3 clientes/a&ntilde;o</p></div>
-      <div class="part-card fi s2"><div class="part-ico">&#9889;</div><div class="part-name">White-Label</div><div class="part-lbl" style="color:var(--purple)">Descuento sobre PVP</div><p class="part-desc">Tu marca, tu precio, tu cliente. API + dashboard partner. M&iacute;n. 10 clientes/a&ntilde;o</p></div>
-    </div>
-  </div>
-</section>
+<div class="ascii-sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; &#9670; &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
 
-<!-- CTA -->
+<!-- CTA TERMINAL -->
 <section class="cta-sec" id="contacto">
-  <div class="container center">
-    <span class="tag">Contacto</span>
-    <h2 class="stitle">Tu equipo habla con clientes cada d&iacute;a<br>&iquest;Sabes qu&eacute; dicen?</h2>
-    <p class="sdesc" style="margin:1.2rem auto 2.5rem">Demo gratuita de 30 min con tus datos reales. Sin compromiso</p>
-    <form style="max-width:460px;margin:0 auto;display:flex;flex-direction:column;gap:.9rem" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'">
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Email corporativo" required>
-      <input type="text" placeholder="Empresa y n&uacute;mero de empleados">
-      <select><option>Producto de inter&eacute;s</option><option>FENIX Pulse (Analytics)</option><option>FENIX Connect (Hub)</option><option>FENIX 360 (Bundle)</option><option>Programa de Partners</option></select>
-      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.95rem;font-size:.95rem">Solicitar Demo Gratuita &rarr;</button>
-      <p style="font-size:.72rem;color:var(--gray)">Sin compromiso. Te contactamos en menos de 24h</p>
-    </form>
-    <div id="ok" style="display:none;padding:1.8rem;background:rgba(62,169,155,.06);border-radius:10px;border:1px solid rgba(62,169,155,.15);max-width:460px;margin:0 auto">
-      <p style="font-size:1.2rem;font-weight:700;color:var(--teal);margin-bottom:.4rem">&#10003; Recibido</p>
-      <p style="color:var(--silver);font-size:.92rem">Te contactaremos en menos de 24 horas para agendar tu demo</p>
+  <div class="container" style="text-align:center">
+    <div class="sec-header" style="text-align:center">
+      <div class="sec-comment">Inicializar demo de 30 minutos</div>
+      <h2 class="sec-title">$ fenix init --demo</h2>
+      <p class="sec-desc" style="margin:.5rem auto 2rem;color:var(--text2)">Con tus datos reales. Sin compromiso. Respuesta en &lt;24h</p>
+    </div>
+    <div class="cta-terminal">
+      <div class="cta-term-bar">
+        <div class="cta-term-dots"><span></span><span></span><span></span></div>
+        <span>fenix@ia:~/demo</span>
+      </div>
+      <div class="cta-body">
+        <div class="prompt-line"><span class="cmd-text">$ fenix init --demo --interactive</span></div>
+        <form style="display:flex;flex-direction:column;gap:.7rem" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'">
+          <input type="text" placeholder="--name=&quot;Tu nombre&quot;" required>
+          <input type="email" placeholder="--email=&quot;email@empresa.com&quot;" required>
+          <input type="text" placeholder="--company=&quot;Empresa&quot; --size=N">
+          <select>
+            <option>--plan=&quot;selecciona&quot;</option>
+            <option>--plan=pulse</option>
+            <option>--plan=connect</option>
+            <option>--plan=360</option>
+            <option>--plan=partners</option>
+          </select>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.75rem;font-size:.82rem">$ fenix init --confirm &rarr;</button>
+          <p style="font-size:.65rem;color:var(--text3)"># Sin compromiso. Te contactamos en &lt;24h. Ctrl+C para cancelar</p>
+        </form>
+        <div id="ok" style="display:none;padding:1.2rem;background:var(--green-dim);border-radius:3px;border:1px solid rgba(0,255,136,.15)">
+          <p style="font-size:.9rem;font-weight:700;color:var(--green);margin-bottom:.3rem">&#10003; Demo inicializada correctamente</p>
+          <p style="color:var(--text2);font-size:.78rem">Proceso en cola. Te contactaremos en &lt;24h para configurar tu instancia</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -572,23 +626,21 @@ footer{background:var(--bg);border-top:1px solid var(--gray3);padding:2.5rem 2.5
 <!-- FOOTER -->
 <footer>
   <div class="ft-inner">
-    <div class="ft-brand">
-      <span style="font-weight:700;color:#ffffff;font-size:.95rem">FENIX <span style="color:var(--teal)">IA</span></span>
-    </div>
+    <div class="ft-brand">FENIX_IA</div>
     <div class="ft-links">
-      <a href="#productos">Productos</a>
-      <a href="#pricing">Precios</a>
-      <a href="#sectores">Sectores</a>
-      <a href="#partners">Partners</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#modules">modules</a>
+      <a href="#channels">channels</a>
+      <a href="#pricing">config</a>
+      <a href="#sectors">processes</a>
+      <a href="#contacto">init</a>
     </div>
   </div>
-  <div style="max-width:1180px;margin:1.2rem auto 0;padding-top:1rem;border-top:1px solid rgba(61,74,92,.15);display:flex;justify-content:center;gap:2rem;flex-wrap:wrap">
-    <a href="https://www.fenixia.tech/terminos" target="_blank" style="color:var(--gray);font-size:.75rem;transition:color .2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--gray)'">T&eacute;rminos y Condiciones</a>
-    <a href="https://www.fenixia.tech/privacidad" target="_blank" style="color:var(--gray);font-size:.75rem;transition:color .2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--gray)'">Pol&iacute;tica de Privacidad</a>
-    <a href="https://www.fenixia.tech/cookies" target="_blank" style="color:var(--gray);font-size:.75rem;transition:color .2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--gray)'">Pol&iacute;tica de Cookies</a>
+  <div class="ft-legal">
+    <a href="https://www.fenixia.tech/terminos" target="_blank">terms</a>
+    <a href="https://www.fenixia.tech/privacidad" target="_blank">privacy</a>
+    <a href="https://www.fenixia.tech/cookies" target="_blank">cookies</a>
   </div>
-  <div class="ft-copy">&copy; 2026 FENIX IA SOLUTIONS &mdash; fenixia.tech &mdash; Todos los derechos reservados</div>
+  <div class="ft-copy"># &copy; 2026 FENIX IA SOLUTIONS &mdash; fenixia.tech &mdash; All rights reserved &mdash; exit 0</div>
 </footer>
 
 <script>
@@ -603,6 +655,17 @@ function toggleMobileMenu(){
   document.querySelector('.mobile-overlay').classList.toggle('active');
   document.body.style.overflow=document.querySelector('.mobile-menu').classList.contains('active')?'hidden':'';
 }
+
+// Terminal typing effect for hero
+(function(){
+  const lines=document.querySelectorAll('#hero-terminal .term-line');
+  lines.forEach((l,i)=>{l.style.opacity='0';l.style.transform='translateY(4px)'});
+  let delay=300;
+  lines.forEach((l,i)=>{
+    setTimeout(()=>{l.style.transition='all .15s ease-out';l.style.opacity='1';l.style.transform='translateY(0)'},delay);
+    delay+=i<2?400:120;
+  });
+})();
 </script>
 </body>
 </html>
