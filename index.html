@@ -202,14 +202,30 @@ section{padding:5rem 2rem}
 .cmp-tbl tr:last-child td{color:var(--green);font-weight:600}
 .cmp-tbl .x{color:var(--red)}.cmp-tbl .v{color:var(--green)}
 
-/* SECTORS AS PROCESSES */
-.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:2rem}
-.proc-card{background:var(--card);border:1px solid var(--border);border-radius:3px;padding:1rem .8rem;transition:all .3s}
-.proc-card:hover{border-color:rgba(0,255,136,.2);background:var(--green-dim)}
-.proc-icon{font-size:1.2rem;margin-bottom:.4rem}
-.proc-name{font-size:.78rem;font-weight:700;color:var(--white);margin-bottom:.2rem}
-.proc-desc{font-size:.68rem;color:var(--text3);line-height:1.5}
-.proc-pid{font-size:.6rem;color:var(--green);margin-top:.4rem}
+/* USE CASES AS LOGS */
+.uc-sector-nav{display:flex;gap:.5rem;margin-top:1.5rem;flex-wrap:wrap}
+.uc-nav-btn{padding:.4rem .9rem;border:1px solid var(--border);border-radius:2px;background:var(--card);color:var(--text2);font-size:.72rem;font-family:var(--mono);cursor:pointer;transition:all .2s}
+.uc-nav-btn:hover{border-color:var(--green);color:var(--green)}
+.uc-nav-btn.active{background:var(--green);color:var(--bg);border-color:var(--green)}
+.uc-log-block{display:none;margin-top:1.5rem}
+.uc-log-block.active{display:block}
+.uc-log-header{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;background:var(--bg3);border:1px solid var(--border);border-bottom:none;border-radius:4px 4px 0 0;font-size:.75rem}
+.uc-log-header .sector-name{color:var(--green);font-weight:700}
+.uc-log-header .sector-desc{color:var(--text3)}
+.uc-log-body{border:1px solid var(--border);border-radius:0 0 4px 4px;padding:0}
+.uc-log-entry{padding:1rem 1.2rem;border-bottom:1px solid var(--border);transition:background .2s}
+.uc-log-entry:last-child{border-bottom:none}
+.uc-log-entry:hover{background:var(--green-dim)}
+.uc-log-entry .log-head{display:flex;align-items:center;gap:.5rem;margin-bottom:.4rem;font-size:.72rem}
+.uc-log-entry .log-tag{padding:.15rem .4rem;border-radius:2px;font-size:.6rem;font-weight:700;letter-spacing:.5px}
+.uc-log-entry .log-tag.pulse{background:rgba(0,255,136,.1);color:var(--green)}
+.uc-log-entry .log-tag.connect{background:rgba(0,221,255,.1);color:var(--cyan)}
+.uc-log-entry .log-tag.f360{background:rgba(170,136,255,.1);color:var(--purple)}
+.uc-log-entry .log-title{font-size:.82rem;font-weight:600;color:var(--white);margin-bottom:.3rem}
+.uc-log-entry .log-desc{font-size:.75rem;color:var(--text2);line-height:1.6}
+.uc-log-entry .log-result{margin-top:.5rem;font-size:.72rem;font-weight:600;color:var(--green)}
+.uc-log-entry .log-result::before{content:'>>> '}
+@media(max-width:600px){.uc-log-entry{padding:.8rem}}
 
 /* CTA */
 .cta-sec{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -562,24 +578,168 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2rem
   </div>
 </section>
 
-<!-- SECTORS AS PROCESSES -->
+<!-- USE CASES AS LOGS -->
 <section id="sectors">
   <div class="container">
     <div class="sec-header">
-      <div class="sec-comment">Procesos activos por sector</div>
-      <h2 class="sec-title">$ fenix ps --sectors</h2>
-      <p class="sec-desc">Cada sector tiene sus procesos optimizados de comunicaci&oacute;n</p>
+      <div class="sec-comment">Casos de uso por sector - logs reales del sistema</div>
+      <h2 class="sec-title">$ fenix logs --use-cases --verbose</h2>
+      <p class="sec-desc">Situaciones reales. Sin nombres. Solo lo que FENIX detecta y resuelve cada d&iacute;a</p>
     </div>
-    <div class="proc-grid">
-      <div class="proc-card fi"><div class="proc-icon">&#127973;</div><div class="proc-name">Cl&iacute;nicas</div><div class="proc-desc">Citas perdidas, seguimiento de pacientes, calidad de atenci&oacute;n</div><div class="proc-pid">PID 2847 &bull; RUNNING</div></div>
-      <div class="proc-card fi s1"><div class="proc-icon">&#127968;</div><div class="proc-name">Inmobiliarias</div><div class="proc-desc">Leads por WA y portales. Cada lead sin atender es comisi&oacute;n perdida</div><div class="proc-pid">PID 2848 &bull; RUNNING</div></div>
-      <div class="proc-card fi s2"><div class="proc-icon">&#128722;</div><div class="proc-name">E-commerce</div><div class="proc-desc">Postventa, devoluciones, experiencia cliente multicanal</div><div class="proc-pid">PID 2849 &bull; RUNNING</div></div>
-      <div class="proc-card fi s3"><div class="proc-icon">&#128188;</div><div class="proc-name">Asesor&iacute;as</div><div class="proc-desc">Comunicaci&oacute;n cr&iacute;tica con clientes. Contexto sin fisuras</div><div class="proc-pid">PID 2850 &bull; RUNNING</div></div>
-      <div class="proc-card fi"><div class="proc-icon">&#128663;</div><div class="proc-name">Talleres</div><div class="proc-desc">Citas por WA, seguimiento postventa, reclamaciones</div><div class="proc-pid">PID 2851 &bull; RUNNING</div></div>
-      <div class="proc-card fi s1"><div class="proc-icon">&#127891;</div><div class="proc-name">Academias</div><div class="proc-desc">Consultas, matr&iacute;culas, comunicaci&oacute;n multicanal</div><div class="proc-pid">PID 2852 &bull; RUNNING</div></div>
-      <div class="proc-card fi s2"><div class="proc-icon">&#128737;</div><div class="proc-name">Seguros</div><div class="proc-desc">Siniestros, renovaciones, nuevas p&oacute;lizas</div><div class="proc-pid">PID 2853 &bull; RUNNING</div></div>
-      <div class="proc-card fi s3"><div class="proc-icon">&#127960;</div><div class="proc-name">Hoteler&iacute;a</div><div class="proc-desc">Reservas, reclamaciones, experiencia del hu&eacute;sped</div><div class="proc-pid">PID 2854 &bull; RUNNING</div></div>
+
+    <div class="uc-sector-nav">
+      <button class="uc-nav-btn active" onclick="showLog('clinicas',this)">clinicas</button>
+      <button class="uc-nav-btn" onclick="showLog('inmob',this)">inmobiliarias</button>
+      <button class="uc-nav-btn" onclick="showLog('ecom',this)">ecommerce</button>
+      <button class="uc-nav-btn" onclick="showLog('asesoria',this)">asesorias</button>
+      <button class="uc-nav-btn" onclick="showLog('seguros',this)">seguros</button>
     </div>
+
+    <!-- CLINICAS -->
+    <div class="uc-log-block active" id="log-clinicas">
+      <div class="uc-log-header">
+        <span>&#127973;</span>
+        <span class="sector-name">clinicas</span>
+        <span class="sector-desc">// 80+ llamadas/d&iacute;a &bull; Cada llamada perdida = paciente que no vuelve</span>
+      </div>
+      <div class="uc-log-body">
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">09:14:22</span></div>
+          <div class="log-title">Llamadas perdidas recuperadas con alertas</div>
+          <div class="log-desc">Paciente llam&oacute; 3 veces sin respuesta. FENIX cruza llamadas perdidas con historial y genera alerta prioritaria antes de que llame a la competencia. El equipo devuelve la llamada en minutos</div>
+          <div class="log-result">De 12 llamadas sin devolver/d&iacute;a a 0 con alertas real-time</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">22:47:03</span></div>
+          <div class="log-title">Cancelaciones nocturnas detectadas antes de abrir</div>
+          <div class="log-desc">WhatsApp a las 22h cancelando cita de ma&ntilde;ana. La IA clasifica el mensaje como cancelaci&oacute;n, lo sube a bandeja prioritaria. El hueco se reubica antes de que abra la cl&iacute;nica a las 8:00</div>
+          <div class="log-result">Huecos de agenda cubiertos antes del inicio de jornada</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">11:32:18</span></div>
+          <div class="log-title">Seguimiento post-tratamiento unificado</div>
+          <div class="log-desc">Tras intervenci&oacute;n, paciente llama, escribe WA, manda email. Todo se ve en hilo &uacute;nico por paciente con sentimiento de cada interacci&oacute;n analizado. Sin cambiar de app, sin perder contexto</div>
+          <div class="log-result">Visi&oacute;n completa del paciente en un solo panel</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INMOBILIARIAS -->
+    <div class="uc-log-block" id="log-inmob">
+      <div class="uc-log-header">
+        <span>&#127968;</span>
+        <span class="sector-name">inmobiliarias</span>
+        <span class="sector-desc">// Lead tarda 5min en enfriarse &bull; T&uacute; tardas 14h en responder</span>
+      </div>
+      <div class="uc-log-body">
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">20:31:44</span></div>
+          <div class="log-title">Leads de portales respondidos en minutos</div>
+          <div class="log-desc">Contacto de portal inmobiliario llega por WA a las 20:30. FENIX clasifica como lead caliente, alerta al agente de guardia y prepara resumen con datos del inmueble que pide el comprador</div>
+          <div class="log-result">Tiempo primera respuesta: de 14h a &lt;15 minutos</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">10:05:12</span></div>
+          <div class="log-title">Seguimiento autom&aacute;tico de interesados</div>
+          <div class="log-desc">Cliente llam&oacute; hace 10 d&iacute;as. Le dijeron "te llamamos". Nadie lo hizo. Pulse transcribe llamada, extrae que busca 3 hab en zona centro, genera recordatorio si pasan 48h sin contacto</div>
+          <div class="log-result">Cero leads olvidados con seguimiento por IA</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">15:22:07</span></div>
+          <div class="log-title">Contexto compartido entre agentes</div>
+          <div class="log-desc">Cliente habl&oacute; con agente A por tel&eacute;fono y agente B por email. Con 360, ambos ven misma ficha con historial completo de todos los canales. El cliente no repite, la agencia da imagen profesional</div>
+          <div class="log-result">Informaci&oacute;n compartida entre equipo sin fricci&oacute;n</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E-COMMERCE -->
+    <div class="uc-log-block" id="log-ecom">
+      <div class="uc-log-header">
+        <span>&#128722;</span>
+        <span class="sector-name">ecommerce</span>
+        <span class="sector-desc">// Cliente escribi&oacute; por 3 canales &bull; Le pediste que repitiera en los 3</span>
+      </div>
+      <div class="uc-log-body">
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">14:18:33</span></div>
+          <div class="log-title">Devoluciones resueltas en primer contacto</div>
+          <div class="log-desc">Comprador pide devoluci&oacute;n por IG DM. Luego llama. Luego email. Desde la primera interacci&oacute;n el agente ve qui&eacute;n es, qu&eacute; compr&oacute; y por qu&eacute; canales ya ha contactado. Sin repetir datos</div>
+          <div class="log-result">Resoluci&oacute;n en primer contacto sin fricci&oacute;n</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">08:45:21</span></div>
+          <div class="log-title">Detecci&oacute;n proactiva de churn</div>
+          <div class="log-desc">Cliente habitual lleva 6 semanas sin comprar. &Uacute;ltima llamada: sentimiento negativo. Pulse cruza frecuencia de compra con an&aacute;lisis de sentimiento y genera alerta de riesgo con motivo probable</div>
+          <div class="log-result">Churn detectado semanas antes de perder al cliente</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">00:12:55</span></div>
+          <div class="log-title">Picos de campa&ntilde;a gestionados con IA</div>
+          <div class="log-desc">Black Friday: WhatsApps x5. FENIX clasifica por urgencia (queja, pre-compra, seguimiento env&iacute;o) y asigna al agente correcto autom&aacute;ticamente, priorizando oportunidades de venta</div>
+          <div class="log-result">Picos de volumen convertidos en picos de venta</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASESORIAS -->
+    <div class="uc-log-block" id="log-asesoria">
+      <div class="uc-log-header">
+        <span>&#128188;</span>
+        <span class="sector-name">asesorias</span>
+        <span class="sector-desc">// Documentaci&oacute;n por 3 canales &bull; Plazos fiscales que no esperan</span>
+      </div>
+      <div class="uc-log-body">
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag connect">CONNECT</span><span style="color:var(--text3)">16:33:09</span></div>
+          <div class="log-title">Documentaci&oacute;n unificada por cliente</div>
+          <div class="log-desc">Cliente manda factura por WA, pregunta por email si la recibiste, llama 2 d&iacute;as despu&eacute;s. Las 3 interacciones en un &uacute;nico hilo. El asesor sabe qu&eacute; tiene y qu&eacute; falta sin buscar entre apps</div>
+          <div class="log-result">Todo lo del cliente en un panel, da igual el canal</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">11:07:44</span></div>
+          <div class="log-title">Llamadas transcritas y resumidas por IA</div>
+          <div class="log-desc">Cliente llama 15 min con instrucciones sobre su declaraci&oacute;n. Pulse transcribe y genera resumen estructurado con puntos clave + acciones pendientes. Cero notas manuales</div>
+          <div class="log-result">Transcripci&oacute;n + resumen ejecutivo autom&aacute;tico por llamada</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">09:51:28</span></div>
+          <div class="log-title">Plazos cr&iacute;ticos extra&iacute;dos de conversaciones</div>
+          <div class="log-desc">En llamada, cliente dice "necesito la declaraci&oacute;n antes del viernes". IA extrae urgencia temporal y genera alerta vinculada al expediente. No se pierde entre 50 tareas del d&iacute;a</div>
+          <div class="log-result">Plazos y urgencias detectados autom&aacute;ticamente de las conversaciones</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEGUROS -->
+    <div class="uc-log-block" id="log-seguros">
+      <div class="uc-log-header">
+        <span>&#128737;</span>
+        <span class="sector-name">seguros</span>
+        <span class="sector-desc">// El tono de una llamada predice si el cliente renueva o se va</span>
+      </div>
+      <div class="uc-log-body">
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">13:22:17</span></div>
+          <div class="log-title">Siniestros documentados en minutos</div>
+          <div class="log-desc">Asegurado llama nervioso a reportar siniestro. Pulse transcribe, extrae datos (fecha, ubicaci&oacute;n, da&ntilde;os) y genera resumen estructurado listo para abrir expediente sin teclear nada</div>
+          <div class="log-result">Apertura de expediente autom&aacute;tica en minutos</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag pulse">PULSE</span><span style="color:var(--text3)">08:15:42</span></div>
+          <div class="log-title">Riesgo de fuga detectado 60 d&iacute;as antes</div>
+          <div class="log-desc">2 meses para renovaci&oacute;n. Cliente llam&oacute; 2 veces con sentimiento negativo. Pulse genera alerta de riesgo con motivo probable extra&iacute;do de transcripciones para que comercial act&uacute;e</div>
+          <div class="log-result">Intervenci&oacute;n proactiva antes de perder la p&oacute;liza</div>
+        </div>
+        <div class="uc-log-entry">
+          <div class="log-head"><span class="log-tag f360">360</span><span style="color:var(--text3)">17:44:05</span></div>
+          <div class="log-title">Cross-selling detectado por IA</div>
+          <div class="log-desc">En llamada rutinaria, cliente menciona que compr&oacute; segunda vivienda. IA detecta menci&oacute;n y genera oportunidad comercial: "posible p&oacute;liza de hogar adicional" vinculada al cliente</div>
+          <div class="log-result">Oportunidades de venta cruzada extra&iacute;das de conversaciones</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -649,6 +809,13 @@ window.addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>50));
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target)}})},{threshold:.12});
 document.querySelectorAll('.fi').forEach(e=>obs.observe(e));
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}));
+
+function showLog(id,btn){
+  document.querySelectorAll('.uc-log-block').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.uc-nav-btn').forEach(t=>t.classList.remove('active'));
+  document.getElementById('log-'+id).classList.add('active');
+  btn.classList.add('active');
+}
 
 function toggleMobileMenu(){
   document.querySelector('.mobile-menu').classList.toggle('active');
