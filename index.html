@@ -882,7 +882,8 @@ footer{background:var(--bg);border-top:1px solid var(--card-border);padding:3rem
       <form id="holded-form" style="display:flex;flex-direction:column;gap:.8rem" onsubmit="submitToHolded(event)">
         <input type="text" name="name" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Email corporativo" required>
-        <input type="text" name="company" placeholder="Empresa y n&uacute;mero de empleados">
+        <input type="text" name="company" placeholder="Nombre de empresa">
+        <input type="number" name="employees" placeholder="N&uacute;mero de empleados" min="1">
         <select name="product" required>
           <option value="" disabled selected>Producto de inter&eacute;s</option>
           <option>FENIX Pulse (Analytics)</option>
@@ -975,17 +976,19 @@ async function submitToHolded(e){
     name:form.querySelector('[name="name"]').value,
     email:form.querySelector('[name="email"]').value,
     company:form.querySelector('[name="company"]').value,
+    employees:form.querySelector('[name="employees"]').value,
     product:form.querySelector('[name="product"]').value,
     source:location.hostname,
     privacy_accepted:form.querySelector('[name="privacy"]').checked,
     privacy_accepted_at:new Date().toISOString()
   };
+  const body=JSON.stringify(data);
+  const opts={method:'POST',headers:{'Content-Type':'application/json'},body};
   try{
-    await fetch('https://fenix-leads-proxy.proveedores-702.workers.dev',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data)
-    });
+    await Promise.allSettled([
+      fetch('https://fenix-leads-proxy.proveedores-702.workers.dev',opts),
+      fetch('https://b2b.fenixia.tech/api/leads/inbound',opts)
+    ]);
   }catch(err){console.warn('Lead submit:',err.message)}
   form.style.display='none';
   document.getElementById('ok').style.display='block';
